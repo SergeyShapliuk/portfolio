@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2fad8e02.css",
-    "main.js": "/portfolio/static/js/main.736a3ea3.js",
-    "static/js/488.9e51c7c4.chunk.js": "/portfolio/static/js/488.9e51c7c4.chunk.js",
+    "main.css": "/portfolio/static/css/main.1b1a97ed.css",
+    "main.js": "/portfolio/static/js/main.c620b1b4.js",
+    "static/js/488.0426d84d.chunk.js": "/portfolio/static/js/488.0426d84d.chunk.js",
     "static/media/dotbigBanner.png": "/portfolio/static/media/dotbigBanner.dfeec184259f848dd096.png",
     "static/media/tap_table_banner.png": "/portfolio/static/media/tap_table_banner.5950afa24d345f376fda.png",
     "static/media/sergey shaplyuk.pdf": "/portfolio/static/media/sergey shaplyuk.3b1bd67ff372b5c6b75f.pdf",
@@ -30,12 +30,12 @@
     "static/media/iosLogo.png": "/portfolio/static/media/iosLogo.1511c3d419cb16aec154.png",
     "static/media/iconJs.png": "/portfolio/static/media/iconJs.3dfb665e058d08c99f28.png",
     "index.html": "/portfolio/index.html",
-    "main.2fad8e02.css.map": "/portfolio/static/css/main.2fad8e02.css.map",
-    "main.736a3ea3.js.map": "/portfolio/static/js/main.736a3ea3.js.map",
-    "488.9e51c7c4.chunk.js.map": "/portfolio/static/js/488.9e51c7c4.chunk.js.map"
+    "main.1b1a97ed.css.map": "/portfolio/static/css/main.1b1a97ed.css.map",
+    "main.c620b1b4.js.map": "/portfolio/static/js/main.c620b1b4.js.map",
+    "488.0426d84d.chunk.js.map": "/portfolio/static/js/488.0426d84d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fad8e02.css",
-    "static/js/main.736a3ea3.js"
+    "static/css/main.1b1a97ed.css",
+    "static/js/main.c620b1b4.js"
   ]
 }
