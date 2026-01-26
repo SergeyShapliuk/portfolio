@@ -1,7 +1,9 @@
 import * as React from "react";
-import {motion, useMotionValueEvent, useScroll} from "framer-motion";
+import {motion} from "framer-motion";
 import s from "./Nav.module.scss";
-import {Link} from "react-scroll";
+import {Link as ScrollLink} from "react-scroll";
+
+const Link = ScrollLink as unknown as React.FC<any>;
 
 const variants = {
     open: {

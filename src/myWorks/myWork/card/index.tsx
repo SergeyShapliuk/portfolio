@@ -72,6 +72,7 @@ export const Card = memo(
                 y.set(0);
             }
         }
+
         // console.log('ppppreeeessss',constraints)
         const containerRef = useRef<HTMLLIElement>(null);
         useWheelScroll(
@@ -108,7 +109,13 @@ export const Card = memo(
             <li ref={containerRef} className={s.card}
                 style={{touchAction: selectedId === id ? "none" : "auto"}}>
                 <Overlay selected={selectedId}/>
-                <div onClick={() => setSelectedId(id)}
+                <div onClick={() => {
+                    if (selectedId === id) {
+                        setSelectedId("");
+                    } else {
+                        setSelectedId(id);
+                    }
+                }}
                      className={`${s.card_content_container} ${selectedId === id && s.open}`}>
                     <motion.div
                         ref={cardRef}

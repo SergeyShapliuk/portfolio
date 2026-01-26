@@ -12,6 +12,7 @@ const home_icon = require("./image/home.png");
 const about_icon = require("./image/about.png");
 const portfolio_icon = require("./image/portfolio.png");
 const contacts_icon = require("./image/email.png");
+const download_icon = require("./image/download.png");
 
 
 export const Images = {
@@ -28,5 +29,6 @@ export const Images = {
     home_icon,
     about_icon,
     portfolio_icon,
-    contacts_icon
+    contacts_icon,
+    download_icon
 };

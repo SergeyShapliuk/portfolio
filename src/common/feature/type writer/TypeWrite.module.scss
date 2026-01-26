@@ -15,21 +15,26 @@
   //animation: typing 7.5s  steps(100, end) .1s 1 normal both,
   //blink-caret .7s infinite;
   //animation-iteration-count: infinite;
-  @media screen and (max-width: 576px){
+  @media screen and (max-width: 576px) {
     font-size: 30px;
 
   }
 
 
-
 }
-.typeWriteCursor{
+
+.typeWriteCursor {
   font-size: 39px;
   font-weight: 500;
-  @media screen and (max-width: 576px){
+  @media screen and (max-width: 576px) {
     font-size: 32px;
     font-weight: 500;
-
+    letter-spacing: 0;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 }
 

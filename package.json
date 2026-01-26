@@ -24,8 +24,6 @@
     "formik": "^2.2.9",
     "framer-motion": "^11.0.25",
     "lodash.range": "^3.2.0",
-    "node-sass": "^9.0.0",
-    "node-sass-install": "^1.0.2",
     "popmotion": "^11.0.5",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.8",
@@ -71,6 +69,7 @@
   "devDependencies": {
     "@types/react": "^18.2.75",
     "@types/react-dom": "^18.2.24",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "sass": "^1.97.2"
   }
 }

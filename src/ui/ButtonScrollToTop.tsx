@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import {motion, useMotionValueEvent, useScroll} from "framer-motion";
-import {Link} from "react-scroll";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronUp} from "@fortawesome/free-solid-svg-icons";
+import { Link as ScrollLink } from "react-scroll";
 
+const Link = ScrollLink as unknown as React.FC<any>;
 
 const ButtonScrollToTop = () => {
     const {scrollY} = useScroll();

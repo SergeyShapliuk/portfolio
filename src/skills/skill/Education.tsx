@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Education.module.scss'
+import s from "./Education.module.scss";
 import styleContainer from "../../common/styles/Container.module.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faRocket} from "@fortawesome/free-solid-svg-icons/faRocket";
@@ -13,31 +13,58 @@ function Education() {
                     <div className={s.icon}>
                         <FontAwesomeIcon icon={faRocket}/>
                     </div>
-                    <h4>2021-2022</h4>
+                    <h4>2025-2026</h4>
                     <h2>IT-INCUBATOR</h2>
-                    <h3>Frontend Developer -{'\n'}React, React-native, Typescript</h3>
+                    <h3>Backend Developer -{"\n"}
+                        Nest JS,
+                        Node JS,
+                        PostgreSQL,
+                        MongoDB</h3>
 
                     <span>Online it-school. Belarus. Minsk</span>
                     <p>I studied the following technologies:
                     </p>
-                    <ul>
-                        <li>REACT</li>
-                        <li>REACT-NATIVE</li>
-                        <li>TYPESCRIPT</li>
-                        <li>JAVASCRIPT</li>
-                        <li>HTML & CSS & SASS</li>
-                        <li>REDUX & REDUX-TOOLKIT</li>
+                    <ul className={s.skillsList}  style={{paddingBottom:50}}>
+                        <li>NESTJS</li>
+                        <li>EXPRESS</li>
+                        <li>NODEJS</li>
+                        <li>JEST</li>
                         <li>GRAPHQL</li>
                         <li>POSTGRESQL</li>
-                        <li>AXIOS & REST API</li>
-                        <li>ANT DESIGN & MATERIAL-UI</li>
-                        <li>UNIT TESTS & JEST</li>
-                        <li>STORYBOOK POSTMAN</li>
+                        <li>SWAGGER</li>
+                        <li>DOCKER</li>
+                        <li>SOCKETIO</li>
+                        <li>KUBERNETES</li>
+
+                    </ul>
+
+                    <div className={s.icon}>
+                        <FontAwesomeIcon icon={faRocket}/>
+                    </div>
+                    <h4>2021-2022</h4>
+                    <h2>IT-INCUBATOR</h2>
+                    <h3>Frontend Developer -{"\n"}React, React-native, Typescript</h3>
+
+                    <span>Online it-school. Belarus. Minsk</span>
+                    <p>I studied the following technologies:
+                    </p>
+                    <ul className={s.skillsList}>
+                        <li>REACT</li>
+                        <li>REACT_NATIVE</li>
+                        <li>REST_API</li>
+                        <li>TYPESCRIPT</li>
+                        <li>REDUX</li>
+                        <li>REDUX_TOOLKIT</li>
+                        <li>JEST</li>
+                        <li>UNIT_TESTS</li>
+                        <li>CSS</li>
+                        <li>SASS</li>
+                        <li>STORYBOOK</li>
                     </ul>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Education;

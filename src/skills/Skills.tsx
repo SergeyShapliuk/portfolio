@@ -19,8 +19,9 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "swiper/scss/scrollbar";
-import {Element} from "react-scroll";
+import {Element as ScrollElement} from "react-scroll";
 
+const Element = ScrollElement as unknown as React.FC<any>;
 
 function Skills() {
     const js = {

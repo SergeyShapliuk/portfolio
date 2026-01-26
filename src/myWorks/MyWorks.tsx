@@ -4,10 +4,14 @@ import styleContainer from "../common/styles/Container.module.scss";
 
 import Title from "../common/Title/Title";
 
-import {Element} from "react-scroll";
 import {Card} from "./myWork/card";
 
 import {Images} from "../assets/Images";
+import {Element as ScrollElement} from "react-scroll";
+import CVModal from "../components/CVModal";
+
+
+const Element = ScrollElement as unknown as React.FC<any>;
 
 
 // import dotbigImage from "../assets/image/dotbigLogo.png";
@@ -71,7 +75,7 @@ import {Images} from "../assets/Images";
 const MyWorksList = () => {
     // const {id} = useParams();
 
-
+    const [isCVModalOpen, setIsCVModalOpen] = useState<boolean>(false);
     const [selectedId, setSelectedId] = useState<string>("");
 
     const handleScroll = () => {
@@ -87,28 +91,51 @@ const MyWorksList = () => {
         }
         return () => window.removeEventListener("scroll", handleScroll);
     }, [selectedId]);
-    // console.log("selectedId", selectedId);
-    return (
-        <Element name={"my_works"}>
-            <section className={s.myWorksBlock}>
-                <div className={`${styleContainer.container} ${s.myWorksContainer}`}>
-                    <Title title={"My Projects"} titleBg={"portfolio"}/>
-                    <ul className={s.myWorks}>
-                        {workData.map((card, index) => (
-                            <Card
-                                key={card.id}
-                                // isSelected={id === card.id}
-                                // history={{navigate}}
-                                selectedId={selectedId}
-                                setSelectedId={setSelectedId}
-                                {...card}
-                            />
-                        ))}
-                    </ul>
-                </div>
-            </section>
-        </Element>
 
+    useEffect(() => {
+        // Проверяем sessionStorage вместо ref
+        const hasShown = sessionStorage.getItem("cvModalShown");
+
+        if (!hasShown) {
+            setIsCVModalOpen(true);
+            sessionStorage.setItem("cvModalShown", "true");
+
+            const timer = setTimeout(() => {
+                setIsCVModalOpen(false);
+            }, 10000);
+
+            return () => clearTimeout(timer);
+        }
+    }, []);
+
+    return (
+        <>
+            <CVModal
+                isOpen={isCVModalOpen}
+                onClose={() => setIsCVModalOpen(false)}
+                cvLink="/path-to-your-cv.pdf"
+            />
+
+            <Element name={"my_works"}>
+                <section className={s.myWorksBlock}>
+                    <div className={`${styleContainer.container} ${s.myWorksContainer}`}>
+                        <Title title={"My Projects"} titleBg={"portfolio"}/>
+                        <ul className={s.myWorks}>
+                            {workData.map((card, index) => (
+                                <Card
+                                    key={card.id}
+                                    // isSelected={id === card.id}
+                                    // history={{navigate}}
+                                    selectedId={selectedId}
+                                    setSelectedId={setSelectedId}
+                                    {...card}
+                                />
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+            </Element>
+        </>
     );
 };
 export default MyWorksList;

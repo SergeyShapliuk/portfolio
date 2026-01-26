@@ -24,6 +24,12 @@ function SkillItem() {
                         <h3>Redux - 75%</h3><span className={s.bar}><span className={s.redux}></span></span>
                     </li>
                     <li>
+                        <h3>Node.js - 65%</h3><span className={s.bar}><span className={s.node}></span></span>
+                    </li>
+                    <li>
+                        <h3>Nest.js - 63%</h3><span className={s.bar}><span className={s.nest}></span></span>
+                    </li>
+                    <li>
                         <h3>Git - 63%</h3><span className={s.bar}><span className={s.git}></span></span>
                     </li>
                     <li>

@@ -15,7 +15,7 @@
   margin: 60px auto;
   list-style: none;
   color: white;
-  @media screen and(max-width: 800px) {
+  @media screen and (max-width: 800px) {
     width: 300px;
     margin: 60px auto;
   }
@@ -69,6 +69,16 @@
 
 .axios {
   width: 80%;
+  animation: axios 5s;
+}
+
+.node {
+  width: 65%;
+  animation: axios 5s;
+}
+
+.nest {
+  width: 63%;
   animation: axios 5s;
 }
 

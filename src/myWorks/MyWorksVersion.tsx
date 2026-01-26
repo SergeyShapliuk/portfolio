@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./MyWorks.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
-import MyWork from "./myWork/MyWork";
 import tapTableImage from "../assets/image/tap_table.png";
 import dotbigImage from "../assets/image/dotbigLogo.png";
 import nomoImage from "../assets/image/nomoLogo.png";
@@ -9,8 +8,9 @@ import todolistImage from "../assets/image/todolistImage.jpg";
 import shopImage from "../assets/image/shopImage.png";
 import tableImage from "../assets/image/tableImage.png";
 import Title from "../common/Title/Title";
-import {Zoom} from "react-awesome-reveal";
-import {Element} from "react-scroll";
+import {Element as ScrollElement} from "react-scroll";
+
+const Element = ScrollElement as unknown as React.FC<any>;
 
 
 function MyWorksVersion() {

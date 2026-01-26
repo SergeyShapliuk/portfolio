@@ -3,7 +3,9 @@ import s from "./Main.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 import ReactTypingEffectDemo from "../common/feature/type writer/typedLibrary/ReactTypingEffectDemo";
 import photo from "../assets/image/photo_.jpg";
-import {Element} from "react-scroll";
+import {Element as ScrollElement} from "react-scroll";
+
+const Element = ScrollElement as unknown as React.FC<any>;
 
 
 function Main() {
@@ -21,15 +23,14 @@ function Main() {
                 <div className={`${styleContainer.container} ${s.mainContainer}`}>
                     <div className={s.text}>
                         <span>Hi There</span>
-                        <h2>-I'm Sergey Shapliuk.</h2>
+                        {/*<h2>-I'm Sergey Shapliuk.</h2>*/}
+                        <h2>-I'm Sergey</h2>
                         <ReactTypingEffectDemo/>
                         <p>
-                            I'm a based front‑end developer
-                            focused on crafting clean & user‑friendly
-                            Single-page application (SPA), PWA and mobile apps with React / React-native /
-                            TypeScript.
-                            I am passionate about building excellent software that improves
-                            the lives of those around me.
+                            I'm a Full-Stack Developer with strong expertise in Front-end and Mobile development,
+                            complemented by solid Back-end experience. I deliver complete solutions — from MVP to
+                            production — for web and mobile platforms, covering the entire development cycle with clean,
+                            scalable architecture.
                         </p>
                     </div>
                     <div id={"photo"} className={s.photo}>

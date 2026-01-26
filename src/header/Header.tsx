@@ -51,7 +51,7 @@ function Header() {
                     animate={isOpen ? "open" : "closed"}
                     custom={height}
                     ref={containerRef}
-                    style={{pointerEvents: "auto"}}
+                    style={{pointerEvents: "auto",zIndex:999}}
         >
             <motion.div className={s.background} variants={sidebar}/>
             <Nav style={{pointerEvents: isOpen ? "auto" : "none"}}/>

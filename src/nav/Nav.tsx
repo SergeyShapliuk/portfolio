@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import {MenuItem} from "./MenuItem";
 import {Images} from "../assets/Images";
 
+
 type NavPropsType = {
     style?: CSSProperties
 }
@@ -17,6 +18,24 @@ function Nav({style}: NavPropsType) {
             transition: {staggerChildren: 0.05, staggerDirection: -1}
         }
     };
+
+    const itemVariants = {
+        open: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                y: {stiffness: 1000, velocity: -100}
+            }
+        },
+        closed: {
+            y: 50,
+            opacity: 0,
+            transition: {
+                y: {stiffness: 1000}
+            }
+        }
+    };
+
     const itemIds = [
         {id: 1, icon: Images.home_icon, title: "Home", link: "home"},
         {id: 2, icon: Images.about_icon, title: "About", link: "about"},
@@ -26,7 +45,10 @@ function Nav({style}: NavPropsType) {
             icon: Images.contacts_icon,
             title: "Contacts",
             link: "contacts"
-        }] as { id: number, icon: string, title: string, link: string }[];
+        }] as { id: number, icon: string, title: string, link: string, download?: boolean }[];
+
+    const itemStyle = {border: `2px solid "#b0820c"`, backgroundColor: "#b0820c"};
+
     return (
         // <div className={s.navBlock}>
         //     <div className={s.container}>
@@ -34,6 +56,28 @@ function Nav({style}: NavPropsType) {
             {itemIds.map(i => (
                 <MenuItem item={i} key={i.id}/>
             ))}
+
+            <motion.li
+                className={s.itemNav}
+                style={{marginTop: 50}}
+                variants={itemVariants}         // <-- тот же variants, что у остальных
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.95}}
+            >
+                <div className={s.icon_placeholder} style={itemStyle}>
+                    <img src={Images.download_icon} className={s.navIcon}/>
+                </div>
+                <a
+                    href={require("../assets/cv/sergey shaplyuk.pdf")}
+                    download="Sergey Shapliuk CV"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={s.text_placeholder} style={itemStyle}
+                >
+                    CV
+                </a>
+            </motion.li>
+
             {/*<div className={s.text}>*/}
 
             {/*    <Link activeClass={s.active}*/}

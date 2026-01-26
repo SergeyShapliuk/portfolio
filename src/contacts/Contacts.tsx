@@ -7,7 +7,9 @@ import {faEnvelope} from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faGlobe} from "@fortawesome/free-solid-svg-icons/faGlobe";
 import ContactsForm from "./ContactsForm";
-import {Element} from "react-scroll";
+import {Element as ScrollElement} from "react-scroll";
+
+const Element = ScrollElement as unknown as React.FC<any>;
 
 
 function Contacts() {
