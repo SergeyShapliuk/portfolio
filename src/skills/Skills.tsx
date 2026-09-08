@@ -13,6 +13,8 @@ import iconHtml from "../assets/image/iconHtml.png";
 import iconCss from "../assets/image/iconCss.png";
 import iconGraphql from "../assets/image/graphql_logo.png";
 import iconPostgreSQL from "../assets/image/postgreSQL_icon.png";
+import iconNode from "../assets/image/iconNode.svg";
+import iconNest from "../assets/image/iconNest.svg";
 import {EffectCoverflow, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/scss";
@@ -64,6 +66,14 @@ function Skills() {
         color: "blue",
         backgroundImage: `url(${iconPostgreSQL})`
     };
+    const node = {
+        color: "blue",
+        backgroundImage: `url(${iconNode})`
+    };
+    const nest = {
+        color: "blue",
+        backgroundImage: `url(${iconNest})`
+    };
 
     return (
         <Element name={"about"}>
@@ -98,6 +108,10 @@ function Skills() {
                                             description={"Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to (and inspired by) Facebook`s Flux architecture, it was created by Dan Abramov and Andrew Clark. Since mid 2016, the primary maintainers are Mark Erikson and Tim Dorr."}/></SwiperSlide>
                         <SwiperSlide><Skill style={axios} title={"Axios"}
                                             description={"Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser that also supports the ES6 Promise API. Great, so from that we gather it does something that we can already do and that has recently been made significantly better…"}/></SwiperSlide>
+                        <SwiperSlide><Skill style={node} title={"Node.js"}
+                                            description={"Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. It runs on the V8 JavaScript engine and executes JavaScript code outside a web browser, most commonly on servers, which allows JavaScript to be used for both client-side and server-side code without needing a second language."}/></SwiperSlide>
+                        <SwiperSlide><Skill style={nest} title={"NestJS"}
+                                            description={"NestJS is a progressive Node.js framework for building efficient, reliable and scalable server-side applications. It is built with and fully supports TypeScript, combines elements of object-oriented, functional, and functional reactive programming, and uses robust HTTP server frameworks like Express under the hood while exposing APIs to work with other libraries."}/></SwiperSlide>
                         <SwiperSlide><Skill style={git} title={"Git"}
                                             description={"Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems)"}/></SwiperSlide>
                         <SwiperSlide><Skill style={html} title={"HTML5"}
