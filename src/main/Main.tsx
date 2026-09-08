@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Main.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 import ReactTypingEffectDemo from "../common/feature/type writer/typedLibrary/ReactTypingEffectDemo";
-import photo from "../assets/image/photo_.jpg";
+import photo from "../assets/image/photo.jpg";
 import {Element as ScrollElement} from "react-scroll";
 
 const Element = ScrollElement as unknown as React.FC<any>;
