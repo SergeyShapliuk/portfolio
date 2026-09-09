@@ -200,6 +200,17 @@ const workData: WorkDataType[] = [
         description: "Developed the Android version of the Xinvest application from scratch, laying out the base architecture and implementing full functionality for the platform.\nDesigned and developed the complete user authentication flow, including sign-in, registration, and password recovery screens with an intuitive interface.\nSeamlessly integrated the web version of the app into the Android client using WebView, ensuring a consistent user experience between the native and web platforms. Configured WebView settings for optimal performance, JavaScript support, and secure interaction between native code and web content.\nTechnologies: React-native, React navigation, React-native-webview.",
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.xinvest"
+    },
+    {
+        id: "7",
+        banner: Images.praktika_banner,
+        icon: Images.praktika_icon,
+        category: "Mobile",
+        title: "Praktika AI",
+        description: "Contributed to the development of Praktika AI – Homework Helper for iOS and Android, an AI-powered assistant that helps students with academic tasks: math, translation, essay writing, and theory explanations.\nWorked on app development and redesign, improving the UX/UI, and implemented new features.\nBuilt real-time chat using Socket.IO (WebSocket) for instant text, image, and file exchange between the user and AI agents, and integrated media and document upload for AI analysis.\nOptimized performance and ensured stable operation on both iOS and Android.\nTechnologies: React-native, MobX, React navigation, Socket.IO, React-native-webview.",
+        pointOfInterest: 70,
+        androidLink: "https://play.google.com/store/apps/details?id=com.praktikarus.android",
+        iosLink: "https://apps.apple.com/by/app/praktika-ai-homework-helper/id6738703953"
     }
 ];
 export type WorkDataType = {

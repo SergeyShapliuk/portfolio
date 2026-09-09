@@ -4,6 +4,8 @@ const nomo_banner = require("./image/nomoBanner.jpg");
 const nomo_icon = require("./image/nomoLogo.jpg");
 const xinvest_banner = require("./image/xinvestBanner.png");
 const xinvest_icon = require("./image/xinvestLogo.jpg");
+const praktika_banner = require("./image/praktikaBanner.png");
+const praktika_icon = require("./image/praktikaLogo.png");
 const dotbig_banner = require("./image/dotbigBanner.png");
 const dotbig_icon = require("./image/dotbigLogo.png");
 const shop_banner = require("./image/shopImage.jpeg");
@@ -24,6 +26,8 @@ export const Images = {
     nomo_icon,
     xinvest_banner,
     xinvest_icon,
+    praktika_banner,
+    praktika_icon,
     dotbig_banner,
     dotbig_icon,
     shop_banner,
