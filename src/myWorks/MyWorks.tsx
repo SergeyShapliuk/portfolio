@@ -214,6 +214,17 @@ const workData: WorkDataType[] = [
         androidLink: "https://play.google.com/store/apps/details?id=com.li.selector.events",
         iosLink: "https://apps.apple.com/by/app/selector-events/id1670019657"
     },
+    {
+        id: "12",
+        banner: Images.bloyd_banner,
+        icon: Images.bloyd_icon,
+        category: "Mobile",
+        title: "Bloyd",
+        description: "Joined the development team of Bloyd, a self-improvement and community app, and contributed new features to the existing product across iOS and Android.\nImplemented in-app payments with Stripe and integrated Intercom for in-app user support and communication.\nWorked on key user-facing screens, adding new functionality such as maps, media viewing, and QR-based interactions to expand the product.\nTechnologies: React Native, MobX, React navigation, Stripe.",
+        pointOfInterest: 0,
+        androidLink: "https://play.google.com/store/apps/details?id=com.bloycom",
+        iosLink: "https://apps.apple.com/us/app/bloyd/id6443450676"
+    },
     // --- Web ---
     {
         id: "5",
