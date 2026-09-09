@@ -230,6 +230,17 @@ const workData: WorkDataType[] = [
         description: "Developed the Autism Fast Check Android application from scratch, a tool for the initial assessment of Autism Spectrum Disorder (ASD) in children. Implemented the validated ATEC questionnaire with scoring logic, multi-language localization, and recommendation screens.\nTechnologies: React Native, Expo, Expo Router, i18next.",
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.app.autismFastCheck"
+    },
+    {
+        id: "10",
+        banner: Images.selector_banner,
+        icon: Images.selector_icon,
+        category: "Mobile",
+        title: "Selector Events",
+        description: "Upgraded the React Native version, resolved dependency conflicts, and optimized overall app performance, improving UI responsiveness and stability on both iOS and Android.\nImplemented a large-scale redesign of key screens, improving the UX and bringing the visual style in full alignment with the brand's premium positioning.\nDesigned and shipped new functionality for the mobile platform, ensuring seamless operation and further product growth.\nTechnologies: React Native, Redux Toolkit, React navigation, Expo.",
+        pointOfInterest: 0,
+        androidLink: "https://play.google.com/store/apps/details?id=com.li.selector.events",
+        iosLink: "https://apps.apple.com/by/app/selector-events/id1670019657"
     }
 ];
 export type WorkDataType = {

@@ -9,6 +9,8 @@ const praktika_icon = require("./image/praktikaLogo.png");
 const supogram_banner = require("./image/supogramBanner.png");
 const autism_banner = require("./image/autismBanner.png");
 const autism_icon = require("./image/autismLogo.png");
+const selector_banner = require("./image/selectorBanner.png");
+const selector_icon = require("./image/selectorLogo.jpg");
 const dotbig_banner = require("./image/dotbigBanner.png");
 const dotbig_icon = require("./image/dotbigLogo.png");
 const shop_banner = require("./image/shopImage.jpeg");
@@ -34,6 +36,8 @@ export const Images = {
     supogram_banner,
     autism_banner,
     autism_icon,
+    selector_banner,
+    selector_icon,
     dotbig_banner,
     dotbig_icon,
     shop_banner,
