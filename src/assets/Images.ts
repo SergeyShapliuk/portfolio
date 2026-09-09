@@ -6,6 +6,7 @@ const xinvest_banner = require("./image/xinvestBanner.png");
 const xinvest_icon = require("./image/xinvestLogo.jpg");
 const praktika_banner = require("./image/praktikaBanner.png");
 const praktika_icon = require("./image/praktikaLogo.png");
+const supogram_banner = require("./image/supogramBanner.png");
 const dotbig_banner = require("./image/dotbigBanner.png");
 const dotbig_icon = require("./image/dotbigLogo.png");
 const shop_banner = require("./image/shopImage.jpeg");
@@ -28,6 +29,7 @@ export const Images = {
     xinvest_icon,
     praktika_banner,
     praktika_icon,
+    supogram_banner,
     dotbig_banner,
     dotbig_icon,
     shop_banner,

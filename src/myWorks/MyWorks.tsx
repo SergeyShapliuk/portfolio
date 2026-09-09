@@ -211,6 +211,15 @@ const workData: WorkDataType[] = [
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.praktikarus.android",
         iosLink: "https://apps.apple.com/by/app/praktika-ai-homework-helper/id6738703953"
+    },
+    {
+        id: "8",
+        banner: Images.supogram_banner,
+        category: "Web",
+        title: "Supogram",
+        description: "Supogram is an interactive browser game. Developed the game mechanics with instant UI state updates and optimized rendering to achieve smooth 60 FPS gameplay, with seamless integration into the main site.\nTechnologies: React, TypeScript, Vite, Framer Motion.",
+        pointOfInterest: 0,
+        hrefDemo: "https://supogram.com/"
     }
 ];
 export type WorkDataType = {
