@@ -161,26 +161,26 @@ const workData: WorkDataType[] = [
         androidLink: "https://play.google.com/store/apps/details?id=com.nomoacademy",
         iosLink: "https://apps.apple.com/by/app/nomo-trading-academy/id6768712487"
     },
-    {
-        id: "3",
-        banner: Images.dotbig_banner,
-        icon: Images.dotbig_icon,
-        category: "Mobile",
-        title: "Dotbig",
-        description: "The project was developed and successfully launched in a limited beta version. However, despite the initial success, further project implementation was halted due to reasons beyond my control.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation.",
-        pointOfInterest: 60,
-        hrefCode: "https://github.com/SergeyShapliuk/Dotbig"
-    },
-    {
-        id: "4",
-        banner: Images.shop_banner,
-        category: "Web",
-        title: "Shops",
-        description: "Technologies: React, Redux, React-router domV6, Redux-thunk, GraphQL,SCSS. The task was performed as a test.Using GraphQL(apollo client). Not mobile version. ",
-        pointOfInterest: 50,
-        hrefDemo: "https://sergeyshapliuk.github.io/shop/",
-        hrefCode: "https://github.com/SergeyShapliuk/shop"
-    },
+    // {
+    //     id: "3",
+    //     banner: Images.dotbig_banner,
+    //     icon: Images.dotbig_icon,
+    //     category: "Mobile",
+    //     title: "Dotbig",
+    //     description: "The project was developed and successfully launched in a limited beta version. However, despite the initial success, further project implementation was halted due to reasons beyond my control.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation.",
+    //     pointOfInterest: 60,
+    //     hrefCode: "https://github.com/SergeyShapliuk/Dotbig"
+    // },
+    // {
+    //     id: "4",
+    //     banner: Images.shop_banner,
+    //     category: "Web",
+    //     title: "Shops",
+    //     description: "Technologies: React, Redux, React-router domV6, Redux-thunk, GraphQL,SCSS. The task was performed as a test.Using GraphQL(apollo client). Not mobile version. ",
+    //     pointOfInterest: 50,
+    //     hrefDemo: "https://sergeyshapliuk.github.io/shop/",
+    //     hrefCode: "https://github.com/SergeyShapliuk/shop"
+    // },
     {
         id: "5",
         banner: Images.todo_banner,
