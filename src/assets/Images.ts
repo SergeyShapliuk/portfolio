@@ -14,6 +14,8 @@ const selector_icon = require("./image/selectorLogo.jpg");
 const investmatch_banner = require("./image/investmatchBanner.png");
 const bloyd_banner = require("./image/bloydBanner.png");
 const bloyd_icon = require("./image/bloydLogo.png");
+const alemx_banner = require("./image/alemxBanner.png");
+const alemx_icon = require("./image/alemxLogo.png");
 const dotbig_banner = require("./image/dotbigBanner.png");
 const dotbig_icon = require("./image/dotbigLogo.png");
 const shop_banner = require("./image/shopImage.jpeg");
@@ -44,6 +46,8 @@ export const Images = {
     investmatch_banner,
     bloyd_banner,
     bloyd_icon,
+    alemx_banner,
+    alemx_icon,
     dotbig_banner,
     dotbig_icon,
     shop_banner,

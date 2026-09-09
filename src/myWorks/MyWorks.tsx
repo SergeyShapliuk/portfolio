@@ -225,6 +225,17 @@ const workData: WorkDataType[] = [
         androidLink: "https://play.google.com/store/apps/details?id=com.bloycom",
         iosLink: "https://apps.apple.com/us/app/bloyd/id6443450676"
     },
+    {
+        id: "13",
+        banner: Images.alemx_banner,
+        icon: Images.alemx_icon,
+        category: "Mobile",
+        title: "Alemx",
+        description: "Upgraded the React Native version, resolved dependency conflicts, and optimized overall app performance, improving UI responsiveness and stability on both iOS and Android.\nImplemented a large-scale redesign of key screens, improving the UX and bringing the visual style in full alignment with the brand's premium positioning.\nDesigned and shipped new functionality for the mobile platform, ensuring seamless operation and further product growth.\nTechnologies: React Native, Zustand, TanStack Query, React navigation, Expo.",
+        pointOfInterest: 0,
+        androidLink: "https://play.google.com/store/apps/details?id=com.alemxapp",
+        iosLink: "https://apps.apple.com/us/app/alemx/id6618150854"
+    },
     // --- Web ---
     {
         id: "5",
