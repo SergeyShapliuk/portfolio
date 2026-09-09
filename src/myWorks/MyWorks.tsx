@@ -140,6 +140,7 @@ const MyWorksList = () => {
 };
 export default MyWorksList;
 const workData: WorkDataType[] = [
+    // --- Mobile ---
     {
         id: "1",
         banner: Images.tt_banner,
@@ -171,26 +172,6 @@ const workData: WorkDataType[] = [
     //     pointOfInterest: 60,
     //     hrefCode: "https://github.com/SergeyShapliuk/Dotbig"
     // },
-    // {
-    //     id: "4",
-    //     banner: Images.shop_banner,
-    //     category: "Web",
-    //     title: "Shops",
-    //     description: "Technologies: React, Redux, React-router domV6, Redux-thunk, GraphQL,SCSS. The task was performed as a test.Using GraphQL(apollo client). Not mobile version. ",
-    //     pointOfInterest: 50,
-    //     hrefDemo: "https://sergeyshapliuk.github.io/shop/",
-    //     hrefCode: "https://github.com/SergeyShapliuk/shop"
-    // },
-    {
-        id: "5",
-        banner: Images.todo_banner,
-        category: "Web",
-        title: "Todolist",
-        description: "Used technologies: TypeScript, React, Redux, Axios. ",
-        pointOfInterest: 150,
-        hrefDemo: " https://sergeyshapliuk.github.io/it-incubator-todolist-ts-start/",
-        hrefCode: "https://github.com/SergeyShapliuk/it-incubator-todolist-ts-start"
-    },
     {
         id: "6",
         banner: Images.xinvest_banner,
@@ -213,15 +194,6 @@ const workData: WorkDataType[] = [
         iosLink: "https://apps.apple.com/by/app/praktika-ai-homework-helper/id6738703953"
     },
     {
-        id: "8",
-        banner: Images.supogram_banner,
-        category: "Web",
-        title: "Supogram",
-        description: "Supogram is an interactive browser game. Developed the game mechanics with instant UI state updates and optimized rendering to achieve smooth 60 FPS gameplay, with seamless integration into the main site.\nTechnologies: React, TypeScript, Vite, Framer Motion.",
-        pointOfInterest: 0,
-        hrefDemo: "https://supogram.com/"
-    },
-    {
         id: "9",
         banner: Images.autism_banner,
         icon: Images.autism_icon,
@@ -242,6 +214,37 @@ const workData: WorkDataType[] = [
         androidLink: "https://play.google.com/store/apps/details?id=com.li.selector.events",
         iosLink: "https://apps.apple.com/by/app/selector-events/id1670019657"
     },
+    // --- Web ---
+    {
+        id: "5",
+        banner: Images.todo_banner,
+        category: "Web",
+        title: "Todolist",
+        description: "Used technologies: TypeScript, React, Redux, Axios. ",
+        pointOfInterest: 150,
+        hrefDemo: " https://sergeyshapliuk.github.io/it-incubator-todolist-ts-start/",
+        hrefCode: "https://github.com/SergeyShapliuk/it-incubator-todolist-ts-start"
+    },
+    // {
+    //     id: "4",
+    //     banner: Images.shop_banner,
+    //     category: "Web",
+    //     title: "Shops",
+    //     description: "Technologies: React, Redux, React-router domV6, Redux-thunk, GraphQL,SCSS. The task was performed as a test.Using GraphQL(apollo client). Not mobile version. ",
+    //     pointOfInterest: 50,
+    //     hrefDemo: "https://sergeyshapliuk.github.io/shop/",
+    //     hrefCode: "https://github.com/SergeyShapliuk/shop"
+    // },
+    {
+        id: "8",
+        banner: Images.supogram_banner,
+        category: "Web",
+        title: "Supogram",
+        description: "Supogram is an interactive browser game. Developed the game mechanics with instant UI state updates and optimized rendering to achieve smooth 60 FPS gameplay, with seamless integration into the main site.\nTechnologies: React, TypeScript, Vite, Framer Motion.",
+        pointOfInterest: 0,
+        hrefDemo: "https://supogram.com/"
+    },
+    // --- Full-stack ---
     {
         id: "11",
         banner: Images.investmatch_banner,
