@@ -220,6 +220,16 @@ const workData: WorkDataType[] = [
         description: "Supogram is an interactive browser game. Developed the game mechanics with instant UI state updates and optimized rendering to achieve smooth 60 FPS gameplay, with seamless integration into the main site.\nTechnologies: React, TypeScript, Vite, Framer Motion.",
         pointOfInterest: 0,
         hrefDemo: "https://supogram.com/"
+    },
+    {
+        id: "9",
+        banner: Images.autism_banner,
+        icon: Images.autism_icon,
+        category: "Mobile",
+        title: "Autism: Fast Check",
+        description: "Developed the Autism Fast Check Android application from scratch, a tool for the initial assessment of Autism Spectrum Disorder (ASD) in children. Implemented the validated ATEC questionnaire with scoring logic, multi-language localization, and recommendation screens.\nTechnologies: React Native, Expo, Expo Router, i18next.",
+        pointOfInterest: 0,
+        androidLink: "https://play.google.com/store/apps/details?id=com.app.autismFastCheck"
     }
 ];
 export type WorkDataType = {
