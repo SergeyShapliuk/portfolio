@@ -75,7 +75,11 @@ const Element = ScrollElement as unknown as React.FC<any>;
 
 const MyWorksList = () => {
     // const {id} = useParams();
-    const {t} = useTranslation("myWorks");
+    const {t, i18n} = useTranslation("myWorks");
+
+    const cvLink = i18n.language === "ru"
+        ? require("../assets/cv/Sergey Shapliuk CV (RU).pdf")
+        : require("../assets/cv/Sergey Shapliuk CV (EN).pdf");
 
     const [isCVModalOpen, setIsCVModalOpen] = useState<boolean>(false);
     const [selectedId, setSelectedId] = useState<string>("");
@@ -115,7 +119,7 @@ const MyWorksList = () => {
             <CVModal
                 isOpen={isCVModalOpen}
                 onClose={() => setIsCVModalOpen(false)}
-                cvLink={require("../assets/cv/sergey shaplyuk.pdf")}
+                cvLink={cvLink}
             />
 
             <Element name={"my_works"}>

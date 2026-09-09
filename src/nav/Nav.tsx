@@ -11,7 +11,10 @@ type NavPropsType = {
 }
 
 function Nav({style}: NavPropsType) {
-    const {t} = useTranslation("nav");
+    const {t, i18n} = useTranslation("nav");
+    const cvLink = i18n.language === "ru"
+        ? require("../assets/cv/Sergey Shapliuk CV (RU).pdf")
+        : require("../assets/cv/Sergey Shapliuk CV (EN).pdf");
     const variants = {
         open: {
             transition: {staggerChildren: 0.07, delayChildren: 0.2}
@@ -70,7 +73,7 @@ function Nav({style}: NavPropsType) {
                     <img src={Images.download_icon} className={s.navIcon}/>
                 </div>
                 <a
-                    href={require("../assets/cv/sergey shaplyuk.pdf")}
+                    href={cvLink}
                     download="Sergey Shapliuk CV"
                     target="_blank"
                     rel="noreferrer"
