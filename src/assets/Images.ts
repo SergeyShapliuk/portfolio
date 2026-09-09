@@ -1,7 +1,9 @@
 const tt_banner = require("./image/tap_table_banner.png");
 const tt_icon = require("./image/tap_table.png");
-const nomo_banner = require("./image/nomoBanner.png");
-const nomo_icon = require("./image/nomoLogo.png");
+const nomo_banner = require("./image/nomoBanner.jpg");
+const nomo_icon = require("./image/nomoLogo.jpg");
+const xinvest_banner = require("./image/xinvestBanner.png");
+const xinvest_icon = require("./image/xinvestLogo.jpg");
 const dotbig_banner = require("./image/dotbigBanner.png");
 const dotbig_icon = require("./image/dotbigLogo.png");
 const shop_banner = require("./image/shopImage.jpeg");
@@ -20,6 +22,8 @@ export const Images = {
     tt_icon,
     nomo_banner,
     nomo_icon,
+    xinvest_banner,
+    xinvest_icon,
     dotbig_banner,
     dotbig_icon,
     shop_banner,

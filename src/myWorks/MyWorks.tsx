@@ -155,11 +155,11 @@ const workData: WorkDataType[] = [
         banner: Images.nomo_banner,
         icon: Images.nomo_icon,
         category: "Mobile",
-        title: "Nomo Academy",
-        description: "Nomo academy operates as an online educational app under the ownership of Nomo Tech sp.z.o.o., a Polish entity.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation.",
+        title: "Nomo Trading Academy",
+        description: "Nomo Trading Academy is an online educational platform for learning to invest and trade, operated by Nomo Tech sp.z.o.o., a Polish entity.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation.",
         pointOfInterest: 70,
-        androidLink: "https://play.google.com/store/apps/details?id=com.taptable",
-        iosLink: "https://apps.apple.com/by/app/taptable-%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2/id6447489142"
+        androidLink: "https://play.google.com/store/apps/details?id=com.nomoacademy",
+        iosLink: "https://apps.apple.com/by/app/nomo-trading-academy/id6768712487"
     },
     {
         id: "3",
@@ -190,6 +190,16 @@ const workData: WorkDataType[] = [
         pointOfInterest: 150,
         hrefDemo: " https://sergeyshapliuk.github.io/it-incubator-todolist-ts-start/",
         hrefCode: "https://github.com/SergeyShapliuk/it-incubator-todolist-ts-start"
+    },
+    {
+        id: "6",
+        banner: Images.xinvest_banner,
+        icon: Images.xinvest_icon,
+        category: "Mobile",
+        title: "Xinvest",
+        description: "Developed the Android version of the Xinvest application from scratch, laying out the base architecture and implementing full functionality for the platform.\nDesigned and developed the complete user authentication flow, including sign-in, registration, and password recovery screens with an intuitive interface.\nSeamlessly integrated the web version of the app into the Android client using WebView, ensuring a consistent user experience between the native and web platforms. Configured WebView settings for optimal performance, JavaScript support, and secure interaction between native code and web content.\nTechnologies: React-native, React navigation, React-native-webview.",
+        pointOfInterest: 70,
+        androidLink: "https://play.google.com/store/apps/details?id=com.xinvest"
     }
 ];
 export type WorkDataType = {
