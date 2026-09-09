@@ -1,4 +1,5 @@
 import React, {CSSProperties} from "react";
+import {useTranslation} from "react-i18next";
 import s from "./Nav.module.scss";
 import {motion} from "framer-motion";
 import {MenuItem} from "./MenuItem";
@@ -10,6 +11,7 @@ type NavPropsType = {
 }
 
 function Nav({style}: NavPropsType) {
+    const {t} = useTranslation("nav");
     const variants = {
         open: {
             transition: {staggerChildren: 0.07, delayChildren: 0.2}
@@ -37,13 +39,13 @@ function Nav({style}: NavPropsType) {
     };
 
     const itemIds = [
-        {id: 1, icon: Images.home_icon, title: "Home", link: "home"},
-        {id: 2, icon: Images.about_icon, title: "About", link: "about"},
-        {id: 3, icon: Images.portfolio_icon, title: "Portfolio", link: "my_works"},
+        {id: 1, icon: Images.home_icon, title: t("items.home"), link: "home"},
+        {id: 2, icon: Images.about_icon, title: t("items.about"), link: "about"},
+        {id: 3, icon: Images.portfolio_icon, title: t("items.portfolio"), link: "my_works"},
         {
             id: 4,
             icon: Images.contacts_icon,
-            title: "Contacts",
+            title: t("items.contacts"),
             link: "contacts"
         }] as { id: number, icon: string, title: string, link: string, download?: boolean }[];
 
@@ -74,7 +76,7 @@ function Nav({style}: NavPropsType) {
                     rel="noreferrer"
                     className={s.text_placeholder} style={itemStyle}
                 >
-                    CV
+                    {t("cvLinkText")}
                 </a>
             </motion.li>
 

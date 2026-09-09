@@ -1,4 +1,5 @@
 import React from "react";
+import {Trans, useTranslation} from "react-i18next";
 import s from "./Experience.module.scss";
 import styleContainer from "../../common/styles/Container.module.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -7,6 +8,7 @@ import ButtonWithGradient from "../../common/feature/button/ButtonWithGradient";
 
 
 function Experience() {
+    const {t} = useTranslation("skills");
 
     return (
         <div id={"experience"} className={s.educBlock}>
@@ -17,17 +19,12 @@ function Experience() {
                     </div>
                     <h4>2021-2026</h4>
                     {/*<h2>Part Time</h2>*/}
-                    <h3>Fullstack Developer - (React, React-native, TypeScript, Node.js, NestJS)</h3>
-                    <p>I`m a fullstack developer with a love for clean architecture,
-                        maintainable code and well-crafted user interfaces.
+                    <h3>{t("experience.role")}</h3>
+                    <p>{t("experience.shortBio")}
                     </p>
                     <span>
-I am a Fullstack developer with experience in <strong>React</strong> and <strong>React Native</strong> for building modern web and mobile applications.
-On the frontend, I use <strong>Redux / Redux Toolkit / RTK Query / React-Redux / React Router DOM / Redux Thunk</strong>, <strong>Formik</strong>, <strong>Axios</strong>, <strong>Material UI</strong>, and <strong>Ant Design</strong>.
-On the backend, I work with <strong>Node.js / Express / NestJS</strong>, <strong>REST APIs / GraphQL</strong>, <strong>PostgreSQL / MongoDB</strong>, and authentication with <strong>JWT / Passport.js</strong>.
-I ensure code quality with <strong>TypeScript</strong>, <strong>unit testing</strong>, and document components using <strong>Storybook</strong>.
-I am passionate about learning new technologies and expanding my skills in fullstack development, including <strong>Angular</strong>, <strong>GraphQL</strong>, and advanced <strong>React Native</strong> projects.
-</span>
+                        <Trans i18nKey="experience.longBio" ns="skills" components={{strong: <strong/>}}/>
+                    </span>
 
                 </div>
                 <ButtonWithGradient/>

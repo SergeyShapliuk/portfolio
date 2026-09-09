@@ -1,0 +1,14 @@
+{
+  "items": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  },
+  "cvLinkText": "CV",
+  "subnav": {
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills"
+  }
+}

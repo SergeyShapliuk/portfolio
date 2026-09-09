@@ -7,7 +7,7 @@ function ReactTypingEffectDemo() {
     return (
         <div className={s.typeWrite}>
             <ReactTypingEffect
-                text={["Fullstack Develop","Frontend Develope", "Mobile Develope"]}
+                text={["Fullstack Develop", "Frontend Develope", "Mobile Develope"]}
                 cursor={"R"}
                 cursorClassName={s.typeWriteCursor}
                 speed={100}

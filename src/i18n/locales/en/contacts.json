@@ -1,0 +1,21 @@
+{
+  "title": "Contacts",
+  "discussHeading": "Let's Discuss Your project",
+  "location": " Belarus,Minsk",
+  "form": {
+    "errors": {
+      "required": "Required",
+      "invalidEmail": "Invalid email address. Enter the correct email",
+      "nameRequired": "Name required",
+      "nameTooShort": "Must be name contain more characters",
+      "messageRequired": "Message required",
+      "messageTooShort": "The message must contain more characters"
+    },
+    "successAlert": "Thanks. Your message has been send. Have a nice day!",
+    "errorAlert": "Something went wrong!",
+    "emailPlaceholder": "Your email",
+    "namePlaceholder": "Your name",
+    "messagePlaceholder": "Your message",
+    "submit": "Send"
+  }
+}

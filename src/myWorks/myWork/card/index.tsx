@@ -1,5 +1,6 @@
 import * as React from "react";
 import {memo, useRef} from "react";
+import {useTranslation} from "react-i18next";
 import {motion, ResolvedValues, useMotionValue} from "framer-motion";
 import {ContentPlaceholder} from "./ContentPlaceholder";
 import {Image} from "./Image";
@@ -45,6 +46,10 @@ export const Card = memo(
          iosLink
      }: CardPropsType) => {
         // const navigate = useNavigate();
+        const {t} = useTranslation();
+        const translatedTitle = t(title);
+        const translatedDescription = t(description);
+        const translatedCategory = category ? t(category) : category;
         const y = useMotionValue(0);
         const zIndex = useMotionValue(selectedId === id ? 2 : 0);
 
@@ -136,8 +141,8 @@ export const Card = memo(
                             pointOfInterest={pointOfInterest}
                             image={banner}
                         />
-                        <CardTitle title={title} category={category} isSelected={selectedId === id}/>
-                        <ContentPlaceholder icon={icon} title={title} description={description}
+                        <CardTitle title={translatedTitle} category={translatedCategory} isSelected={selectedId === id}/>
+                        <ContentPlaceholder icon={icon} title={translatedTitle} description={translatedDescription}
                                             androidLink={androidLink} iosLink={iosLink} demo={hrefDemo}
                                             github={hrefCode}/>
                     </motion.div>

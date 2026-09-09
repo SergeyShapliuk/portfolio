@@ -1,0 +1,12 @@
+{
+  "downloadCvButton": {
+    "download": "Download",
+    "cv": "CV"
+  },
+  "infoLabel": "Information: ",
+  "rollerCallout": "What else do you need to know?",
+  "cvModal": {
+    "body": "You can download the latest CV to see all my work.",
+    "downloadButton": "Download CV"
+  }
+}

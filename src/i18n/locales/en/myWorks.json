@@ -1,0 +1,54 @@
+{
+  "title": "My Projects",
+  "categories": {
+    "mobile": "Mobile",
+    "web": "Web",
+    "web_tma_back": "Web (TMA/BACK)"
+  },
+  "projects": {
+    "1": {
+      "title": "Tap-Table",
+      "description": "Online service for booking tables in restaurants and cafes, providing users with the ability to quickly and conveniently select and reserve tables.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation."
+    },
+    "2": {
+      "title": "Nomo Trading Academy",
+      "description": "Nomo Trading Academy is an online educational platform for learning to invest and trade, operated by Nomo Tech sp.z.o.o., a Polish entity.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation."
+    },
+    "6": {
+      "title": "Xinvest",
+      "description": "Developed the Android version of the Xinvest application from scratch, laying out the base architecture and implementing full functionality for the platform.\nDesigned and developed the complete user authentication flow, including sign-in, registration, and password recovery screens with an intuitive interface.\nSeamlessly integrated the web version of the app into the Android client using WebView, ensuring a consistent user experience between the native and web platforms. Configured WebView settings for optimal performance, JavaScript support, and secure interaction between native code and web content.\nTechnologies: React-native, React navigation, React-native-webview."
+    },
+    "7": {
+      "title": "Praktika AI",
+      "description": "Contributed to the development of Praktika AI – Homework Helper for iOS and Android, an AI-powered assistant that helps students with academic tasks: math, translation, essay writing, and theory explanations.\nWorked on app development and redesign, improving the UX/UI, and implemented new features.\nBuilt real-time chat using Socket.IO (WebSocket) for instant text, image, and file exchange between the user and AI agents, and integrated media and document upload for AI analysis.\nOptimized performance and ensured stable operation on both iOS and Android.\nTechnologies: React-native, MobX, React navigation, Socket.IO, React-native-webview."
+    },
+    "9": {
+      "title": "Autism: Fast Check",
+      "description": "Developed the Autism Fast Check Android application from scratch, a tool for the initial assessment of Autism Spectrum Disorder (ASD) in children. Implemented the validated ATEC questionnaire with scoring logic, multi-language localization, and recommendation screens.\nTechnologies: React Native, Expo, Expo Router, i18next."
+    },
+    "10": {
+      "title": "Selector Events",
+      "description": "Upgraded the React Native version, resolved dependency conflicts, and optimized overall app performance, improving UI responsiveness and stability on both iOS and Android.\nImplemented a large-scale redesign of key screens, improving the UX and bringing the visual style in full alignment with the brand's premium positioning.\nDesigned and shipped new functionality for the mobile platform, ensuring seamless operation and further product growth.\nTechnologies: React Native, Redux Toolkit, React navigation, Expo."
+    },
+    "12": {
+      "title": "Bloyd",
+      "description": "Joined the development team of Bloyd, a self-improvement and community app, and contributed new features to the existing product across iOS and Android.\nImplemented in-app payments with Stripe and integrated Intercom for in-app user support and communication.\nWorked on key user-facing screens, adding new functionality such as maps, media viewing, and QR-based interactions to expand the product.\nTechnologies: React Native, MobX, React navigation, Stripe."
+    },
+    "13": {
+      "title": "Alemx",
+      "description": "Upgraded the React Native version, resolved dependency conflicts, and optimized overall app performance, improving UI responsiveness and stability on both iOS and Android.\nImplemented a large-scale redesign of key screens, improving the UX and bringing the visual style in full alignment with the brand's premium positioning.\nDesigned and shipped new functionality for the mobile platform, ensuring seamless operation and further product growth.\nTechnologies: React Native, Zustand, TanStack Query, React navigation, Expo."
+    },
+    "5": {
+      "title": "Todolist",
+      "description": "Used technologies: TypeScript, React, Redux, Axios. "
+    },
+    "8": {
+      "title": "Supogram",
+      "description": "Supogram is an interactive browser game. Developed the game mechanics with instant UI state updates and optimized rendering to achieve smooth 60 FPS gameplay, with seamless integration into the main site.\nTechnologies: React, TypeScript, Vite, Framer Motion."
+    },
+    "11": {
+      "title": "InvestMatch",
+      "description": "Developed the frontend for InvestMatch, a Telegram Mini App, integrating the Telegram Web App API for authentication, adaptive theming, and in-app navigation.\nBuilt the backend from scratch with Node.js, Express, and MongoDB (Mongoose), implementing JWT-based authentication and a modular architecture using Inversify for dependency injection.\nDeveloped the companion Telegram bot with the Grammy framework, handling onboarding and linking users to the Mini App.\nTechnologies: React, TypeScript, Telegram Mini Apps SDK, TON Connect, Node.js, Express, MongoDB, Grammy."
+    }
+  }
+}

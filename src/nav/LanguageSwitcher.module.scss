@@ -1,0 +1,46 @@
+@import "../common/styles/sass/variables";
+
+.langSwitcher {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  display: flex;
+  gap: 8px;
+}
+
+.langButton {
+  border: 2px solid #b0820c;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  width: 36px;
+  height: 28px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+
+  &:hover {
+    background-color: rgba($primaryColor, 0.3);
+  }
+
+  &.active {
+    background-color: $primaryColor;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .langSwitcher {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .langButton {
+    width: 30px;
+    height: 24px;
+    font-size: 11px;
+  }
+}

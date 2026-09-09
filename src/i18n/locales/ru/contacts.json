@@ -1,0 +1,21 @@
+{
+  "title": "Контакты",
+  "discussHeading": "Давайте обсудим ваш проект",
+  "location": " Беларусь, Минск",
+  "form": {
+    "errors": {
+      "required": "Обязательное поле",
+      "invalidEmail": "Некорректный email. Введите правильный адрес электронной почты",
+      "nameRequired": "Укажите имя",
+      "nameTooShort": "Имя должно содержать больше символов",
+      "messageRequired": "Введите сообщение",
+      "messageTooShort": "Сообщение должно содержать больше символов"
+    },
+    "successAlert": "Спасибо. Ваше сообщение отправлено. Хорошего дня!",
+    "errorAlert": "Что-то пошло не так!",
+    "emailPlaceholder": "Ваш email",
+    "namePlaceholder": "Ваше имя",
+    "messagePlaceholder": "Ваше сообщение",
+    "submit": "Отправить"
+  }
+}

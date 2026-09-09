@@ -1,4 +1,5 @@
 import React from "react";
+import {useTranslation} from "react-i18next";
 import s from "./Main.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 import ReactTypingEffectDemo from "../common/feature/type writer/typedLibrary/ReactTypingEffectDemo";
@@ -9,6 +10,7 @@ const Element = ScrollElement as unknown as React.FC<any>;
 
 
 function Main() {
+    const {t} = useTranslation("main");
     let bg: any = document.querySelectorAll("#photo");
     for (let i = 0; i < bg.length; i++) {
         window.addEventListener("mousemove", function (e) {
@@ -22,15 +24,12 @@ function Main() {
             <section className={s.mainBlock}>
                 <div className={`${styleContainer.container} ${s.mainContainer}`}>
                     <div className={s.text}>
-                        <span>Hi There</span>
+                        <span>{t("greeting")}</span>
                         {/*<h2>-I'm Sergey Shapliuk.</h2>*/}
-                        <h2>-I'm Sergey</h2>
+                        <h2>{t("heroName")}</h2>
                         <ReactTypingEffectDemo/>
                         <p>
-                            I'm a Full-Stack Developer with strong expertise in Front-end and Mobile development,
-                            complemented by solid Back-end experience. I deliver complete solutions — from MVP to
-                            production — for web and mobile platforms, covering the entire development cycle with clean,
-                            scalable architecture.
+                            {t("bio")}
                         </p>
                     </div>
                     <div id={"photo"} className={s.photo}>

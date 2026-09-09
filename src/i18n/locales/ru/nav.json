@@ -1,0 +1,14 @@
+{
+  "items": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "portfolio": "Портфолио",
+    "contacts": "Контакты"
+  },
+  "cvLinkText": "CV",
+  "subnav": {
+    "experience": "Опыт",
+    "education": "Образование",
+    "skills": "Навыки"
+  }
+}

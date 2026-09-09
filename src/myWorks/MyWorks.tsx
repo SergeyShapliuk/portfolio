@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
 import s from "./MyWorks.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 
@@ -74,6 +75,7 @@ const Element = ScrollElement as unknown as React.FC<any>;
 
 const MyWorksList = () => {
     // const {id} = useParams();
+    const {t} = useTranslation("myWorks");
 
     const [isCVModalOpen, setIsCVModalOpen] = useState<boolean>(false);
     const [selectedId, setSelectedId] = useState<string>("");
@@ -113,13 +115,13 @@ const MyWorksList = () => {
             <CVModal
                 isOpen={isCVModalOpen}
                 onClose={() => setIsCVModalOpen(false)}
-                cvLink="/path-to-your-cv.pdf"
+                cvLink={require("../assets/cv/sergey shaplyuk.pdf")}
             />
 
             <Element name={"my_works"}>
                 <section className={s.myWorksBlock}>
                     <div className={`${styleContainer.container} ${s.myWorksContainer}`}>
-                        <Title title={"My Projects"} titleBg={"portfolio"}/>
+                        <Title title={t("title")} titleBg={"portfolio"}/>
                         <ul className={s.myWorks}>
                             {workData.map((card, index) => (
                                 <Card
@@ -145,9 +147,9 @@ const workData: WorkDataType[] = [
         id: "1",
         banner: Images.tt_banner,
         icon: Images.tt_icon,
-        category: "Mobile",
-        title: "Tap-Table",
-        description: "Online service for booking tables in restaurants and cafes, providing users with the ability to quickly and conveniently select and reserve tables.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.1.title",
+        description: "myWorks:projects.1.description",
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.taptable",
         iosLink: "https://apps.apple.com/by/app/taptable-%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2/id6447489142"
@@ -155,9 +157,9 @@ const workData: WorkDataType[] = [
         id: "2",
         banner: Images.nomo_banner,
         icon: Images.nomo_icon,
-        category: "Mobile",
-        title: "Nomo Trading Academy",
-        description: "Nomo Trading Academy is an online educational platform for learning to invest and trade, operated by Nomo Tech sp.z.o.o., a Polish entity.\nI was responsible for the development of the application and deployment in a production environment.\nTechnologies: React-native, Redux-toolkit, React navigation.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.2.title",
+        description: "myWorks:projects.2.description",
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.nomoacademy",
         iosLink: "https://apps.apple.com/by/app/nomo-trading-academy/id6768712487"
@@ -176,9 +178,9 @@ const workData: WorkDataType[] = [
         id: "6",
         banner: Images.xinvest_banner,
         icon: Images.xinvest_icon,
-        category: "Mobile",
-        title: "Xinvest",
-        description: "Developed the Android version of the Xinvest application from scratch, laying out the base architecture and implementing full functionality for the platform.\nDesigned and developed the complete user authentication flow, including sign-in, registration, and password recovery screens with an intuitive interface.\nSeamlessly integrated the web version of the app into the Android client using WebView, ensuring a consistent user experience between the native and web platforms. Configured WebView settings for optimal performance, JavaScript support, and secure interaction between native code and web content.\nTechnologies: React-native, React navigation, React-native-webview.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.6.title",
+        description: "myWorks:projects.6.description",
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.xinvest"
     },
@@ -186,9 +188,9 @@ const workData: WorkDataType[] = [
         id: "7",
         banner: Images.praktika_banner,
         icon: Images.praktika_icon,
-        category: "Mobile",
-        title: "Praktika AI",
-        description: "Contributed to the development of Praktika AI – Homework Helper for iOS and Android, an AI-powered assistant that helps students with academic tasks: math, translation, essay writing, and theory explanations.\nWorked on app development and redesign, improving the UX/UI, and implemented new features.\nBuilt real-time chat using Socket.IO (WebSocket) for instant text, image, and file exchange between the user and AI agents, and integrated media and document upload for AI analysis.\nOptimized performance and ensured stable operation on both iOS and Android.\nTechnologies: React-native, MobX, React navigation, Socket.IO, React-native-webview.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.7.title",
+        description: "myWorks:projects.7.description",
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.praktikarus.android",
         iosLink: "https://apps.apple.com/by/app/praktika-ai-homework-helper/id6738703953"
@@ -197,9 +199,9 @@ const workData: WorkDataType[] = [
         id: "9",
         banner: Images.autism_banner,
         icon: Images.autism_icon,
-        category: "Mobile",
-        title: "Autism: Fast Check",
-        description: "Developed the Autism Fast Check Android application from scratch, a tool for the initial assessment of Autism Spectrum Disorder (ASD) in children. Implemented the validated ATEC questionnaire with scoring logic, multi-language localization, and recommendation screens.\nTechnologies: React Native, Expo, Expo Router, i18next.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.9.title",
+        description: "myWorks:projects.9.description",
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.app.autismFastCheck"
     },
@@ -207,9 +209,9 @@ const workData: WorkDataType[] = [
         id: "10",
         banner: Images.selector_banner,
         icon: Images.selector_icon,
-        category: "Mobile",
-        title: "Selector Events",
-        description: "Upgraded the React Native version, resolved dependency conflicts, and optimized overall app performance, improving UI responsiveness and stability on both iOS and Android.\nImplemented a large-scale redesign of key screens, improving the UX and bringing the visual style in full alignment with the brand's premium positioning.\nDesigned and shipped new functionality for the mobile platform, ensuring seamless operation and further product growth.\nTechnologies: React Native, Redux Toolkit, React navigation, Expo.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.10.title",
+        description: "myWorks:projects.10.description",
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.li.selector.events",
         iosLink: "https://apps.apple.com/by/app/selector-events/id1670019657"
@@ -218,9 +220,9 @@ const workData: WorkDataType[] = [
         id: "12",
         banner: Images.bloyd_banner,
         icon: Images.bloyd_icon,
-        category: "Mobile",
-        title: "Bloyd",
-        description: "Joined the development team of Bloyd, a self-improvement and community app, and contributed new features to the existing product across iOS and Android.\nImplemented in-app payments with Stripe and integrated Intercom for in-app user support and communication.\nWorked on key user-facing screens, adding new functionality such as maps, media viewing, and QR-based interactions to expand the product.\nTechnologies: React Native, MobX, React navigation, Stripe.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.12.title",
+        description: "myWorks:projects.12.description",
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.bloycom",
         iosLink: "https://apps.apple.com/us/app/bloyd/id6443450676"
@@ -229,9 +231,9 @@ const workData: WorkDataType[] = [
         id: "13",
         banner: Images.alemx_banner,
         icon: Images.alemx_icon,
-        category: "Mobile",
-        title: "Alemx",
-        description: "Upgraded the React Native version, resolved dependency conflicts, and optimized overall app performance, improving UI responsiveness and stability on both iOS and Android.\nImplemented a large-scale redesign of key screens, improving the UX and bringing the visual style in full alignment with the brand's premium positioning.\nDesigned and shipped new functionality for the mobile platform, ensuring seamless operation and further product growth.\nTechnologies: React Native, Zustand, TanStack Query, React navigation, Expo.",
+        category: "myWorks:categories.mobile",
+        title: "myWorks:projects.13.title",
+        description: "myWorks:projects.13.description",
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.alemxapp",
         iosLink: "https://apps.apple.com/us/app/alemx/id6618150854"
@@ -240,9 +242,9 @@ const workData: WorkDataType[] = [
     {
         id: "5",
         banner: Images.todo_banner,
-        category: "Web",
-        title: "Todolist",
-        description: "Used technologies: TypeScript, React, Redux, Axios. ",
+        category: "myWorks:categories.web",
+        title: "myWorks:projects.5.title",
+        description: "myWorks:projects.5.description",
         pointOfInterest: 150,
         hrefDemo: " https://sergeyshapliuk.github.io/it-incubator-todolist-ts-start/",
         hrefCode: "https://github.com/SergeyShapliuk/it-incubator-todolist-ts-start"
@@ -260,9 +262,9 @@ const workData: WorkDataType[] = [
     {
         id: "8",
         banner: Images.supogram_banner,
-        category: "Web",
-        title: "Supogram",
-        description: "Supogram is an interactive browser game. Developed the game mechanics with instant UI state updates and optimized rendering to achieve smooth 60 FPS gameplay, with seamless integration into the main site.\nTechnologies: React, TypeScript, Vite, Framer Motion.",
+        category: "myWorks:categories.web",
+        title: "myWorks:projects.8.title",
+        description: "myWorks:projects.8.description",
         pointOfInterest: 0,
         hrefDemo: "https://supogram.com/"
     },
@@ -270,9 +272,9 @@ const workData: WorkDataType[] = [
     {
         id: "11",
         banner: Images.investmatch_banner,
-        category: "Web (TMA/BACK)",
-        title: "InvestMatch",
-        description: "Developed the frontend for InvestMatch, a Telegram Mini App, integrating the Telegram Web App API for authentication, adaptive theming, and in-app navigation.\nBuilt the backend from scratch with Node.js, Express, and MongoDB (Mongoose), implementing JWT-based authentication and a modular architecture using Inversify for dependency injection.\nDeveloped the companion Telegram bot with the Grammy framework, handling onboarding and linking users to the Mini App.\nTechnologies: React, TypeScript, Telegram Mini Apps SDK, TON Connect, Node.js, Express, MongoDB, Grammy.",
+        category: "myWorks:categories.web_tma_back",
+        title: "myWorks:projects.11.title",
+        description: "myWorks:projects.11.description",
         pointOfInterest: 0,
         hrefDemo: "https://t.me/InvestmatchBot?startapp=comand"
     }

@@ -11,6 +11,7 @@ import {motion, useScroll} from "framer-motion";
 import ButtonScrollToTop from "./ui/ButtonScrollToTop";
 import CursorBalls from "./ui/CursorBalls";
 import MyWorksList from "./myWorks/MyWorks";
+import LanguageSwitcher from "./nav/LanguageSwitcher";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                 zIndex: 1
             }}/>
             <CursorBalls/>
+            <LanguageSwitcher/>
             <Header/>
             <Fade cascade damping={0.1}>
                 <Main/>

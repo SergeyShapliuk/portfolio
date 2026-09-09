@@ -1,4 +1,5 @@
 import React from "react";
+import {useTranslation} from "react-i18next";
 import s from "./CVModal.module.scss";
 
 type CVModalProps = {
@@ -8,16 +9,16 @@ type CVModalProps = {
 };
 
 const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose, cvLink }) => {
+    const {t} = useTranslation("common");
     if (!isOpen) return null;
 
     return (
         <div className={s.overlay} onClick={onClose}>
             <div className={s.modal} onClick={(e) => e.stopPropagation()}>
-                <h2>These are examples, but not actual projects.</h2>
-                <p>You can download the latest CV to see all my work.</p>
-                {/*<a href={cvLink} target="_blank" rel="noopener noreferrer">*/}
-                {/*    <button className={s.downloadBtn}>Download CV</button>*/}
-                {/*</a>*/}
+                <h2>{t("cvModal.body")}</h2>
+                <a href={cvLink} download="Sergey Shapliuk CV" target="_blank" rel="noopener noreferrer">
+                    <button className={s.downloadBtn} onClick={onClose}>{t("cvModal.downloadButton")}</button>
+                </a>
                 <button className={s.closeBtn} onClick={onClose}>✕</button>
             </div>
         </div>

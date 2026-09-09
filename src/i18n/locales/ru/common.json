@@ -1,0 +1,12 @@
+{
+  "downloadCvButton": {
+    "download": "Скачать",
+    "cv": "CV"
+  },
+  "infoLabel": "Информация: ",
+  "rollerCallout": "Что ещё вы хотите узнать?",
+  "cvModal": {
+    "body": "Вы можете скачать актуальное резюме, чтобы увидеть все мои работы.",
+    "downloadButton": "Скачать CV"
+  }
+}
