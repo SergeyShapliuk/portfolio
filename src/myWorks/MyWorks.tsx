@@ -241,6 +241,15 @@ const workData: WorkDataType[] = [
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.li.selector.events",
         iosLink: "https://apps.apple.com/by/app/selector-events/id1670019657"
+    },
+    {
+        id: "11",
+        banner: Images.investmatch_banner,
+        category: "Web (TMA/BACK)",
+        title: "InvestMatch",
+        description: "Developed the frontend for InvestMatch, a Telegram Mini App, integrating the Telegram Web App API for authentication, adaptive theming, and in-app navigation.\nBuilt the backend from scratch with Node.js, Express, and MongoDB (Mongoose), implementing JWT-based authentication and a modular architecture using Inversify for dependency injection.\nDeveloped the companion Telegram bot with the Grammy framework, handling onboarding and linking users to the Mini App.\nTechnologies: React, TypeScript, Telegram Mini Apps SDK, TON Connect, Node.js, Express, MongoDB, Grammy.",
+        pointOfInterest: 0,
+        hrefDemo: "https://t.me/InvestmatchBot?startapp=comand"
     }
 ];
 export type WorkDataType = {

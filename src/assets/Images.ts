@@ -11,6 +11,7 @@ const autism_banner = require("./image/autismBanner.png");
 const autism_icon = require("./image/autismLogo.png");
 const selector_banner = require("./image/selectorBanner.png");
 const selector_icon = require("./image/selectorLogo.jpg");
+const investmatch_banner = require("./image/investmatchBanner.png");
 const dotbig_banner = require("./image/dotbigBanner.png");
 const dotbig_icon = require("./image/dotbigLogo.png");
 const shop_banner = require("./image/shopImage.jpeg");
@@ -38,6 +39,7 @@ export const Images = {
     autism_icon,
     selector_banner,
     selector_icon,
+    investmatch_banner,
     dotbig_banner,
     dotbig_icon,
     shop_banner,
