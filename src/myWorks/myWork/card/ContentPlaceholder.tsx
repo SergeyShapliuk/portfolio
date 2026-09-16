@@ -31,6 +31,7 @@ export const ContentPlaceholder = React.memo(({
         >
             <div style={{display: "flex", alignItems: "center", flexWrap: "wrap"}}><img
                 src={icon}
+                alt=""
                 className={s.card_icon}/>
                 <h2 style={{paddingLeft: 20}}>{title}</h2>
 

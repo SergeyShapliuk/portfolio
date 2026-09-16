@@ -25,7 +25,7 @@ export function useScrollConstraints(ref: any, measureConstraints: boolean) {
         const top = Math.min(scrollableViewport - contentHeight, 0);
 
         setConstraints({top, bottom: 0});
-    }, [measureConstraints]);
+    }, [measureConstraints, ref]);
 
     return constraints;
 }

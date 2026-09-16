@@ -8,10 +8,6 @@ import range from "lodash.range";
 type Position = { x: number, y: number };
 type BallStyle = Position;
 
-interface BallComponentProps {
-    balls: BallStyle[];
-}
-
 const StaggeredMotion = StaggeredMotionOriginal as unknown as React.FC<{
     defaultStyles: BallStyle[];
     styles: (prevStyles: BallStyle[]) => BallStyle[];

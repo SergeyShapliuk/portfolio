@@ -19,22 +19,22 @@ There is no separate lint script; ESLint runs through CRA's build/test pipeline 
 
 ## Architecture
 
-**Single-page layout composed in `App.tsx`.** The app is not really route-driven for its main scroll experience: `App.tsx` renders one long page by stacking top-level section components directly — `Header`, `Main`, `Skills`, `HeaderSkills`, `MyWorksList`, `Contacts`, `Footer` — wrapped in `react-awesome-reveal`'s `Fade cascade`. `react-router-dom` (`nav/Routers.tsx`, `nav/RoutersSkills.tsx`) exists alongside this for anchor-style nav (`/home`, `/about`, `/my_works`, `/contacts`) but the routed elements are the same section components; treat routing as secondary navigation sugar over the always-rendered sections, not as separate pages with separate data.
+**Single-page layout composed in `App.tsx`.** The app is not really route-driven for its main scroll experience: `App.tsx` renders one long page by stacking top-level section components directly — `Header`, `Main`, `Skills`, `HeaderSkills`, `MyWorksList`, `Contacts`, `Footer` — wrapped in `react-awesome-reveal`'s `Fade cascade`. In-page navigation uses `react-scroll` (`Element name="my_works"` etc.). `react-router-dom` survives only in `nav/RoutersSkills.tsx` (used by `HeaderSkills`); don't treat routing as separate pages with separate data.
 
 **Feature-folder-per-section, not layer-per-type.** Each top-level section lives in its own folder at `src/` root (`header/`, `main/`, `skills/`, `myWorks/`, `contacts/`, `footer/`, `nav/`), and each folder colocates its component(s), its own `*.module.scss`, and section-specific subcomponents (e.g. `myWorks/myWork/card/` holds the work-card's `Image`, `CardTitle`, `ContentPlaceholder`, and `animations.ts`). When adding to a section, put new files inside that section's folder rather than in a shared layer.
 
 **Shared/reusable pieces live under `src/common/`:**
-- `common/feature/` — reusable UI widgets used across sections (`navBar`, `popup`, `button`, `roller text`, `type writer`) — note some subfolder names contain spaces.
+- `common/feature/` — reusable UI widgets used across sections (`popup`, `button`, `type writer`) — note some subfolder names contain spaces.
 - `common/utils/hooks/` — shared hooks (`useDimesions`, `useInvertedBorderRadius`, `useScrollConstraints`, `useWheelScroll`), mostly supporting the Framer Motion sidebar/scroll interactions.
 - `common/styles/sass/` — global Sass variables (`variables.scss`) and mixins (`mixins.scss`) imported by module stylesheets; `common/styles/Container.module.scss` is a shared layout wrapper.
 
 **Styling** is CSS Modules with Sass (`ComponentName.module.scss` imported as `s` and referenced via `s.className`), plus `App.scss`/`index.css` for globals. Colors/fonts are centralized in `common/styles/sass/variables.scss` ($primaryColor, $bgColor, font families) — reuse these variables instead of hardcoding values in new component styles.
 
-**Animation stack:** `framer-motion` drives most interactive motion (the sidebar nav `Header.tsx`/`Nav.tsx`, scroll-linked effects via `useScroll`), `react-awesome-reveal` drives scroll-in reveal of whole sections, and `react-spring`/`popmotion`/`@popmotion/popcorn` back specific custom hooks (e.g. drag/scroll constraints). When adding motion to a new component, check whether an existing hook in `common/utils/hooks/` already does what you need before writing a new one.
+**Animation stack:** `framer-motion` drives most interactive motion (the sidebar nav `Header.tsx`/`Nav.tsx`, scroll-linked effects via `useScroll`), `react-awesome-reveal` drives scroll-in reveal of whole sections, `react-motion` powers the `ui/CursorBalls` cursor trail, and the custom hooks in `common/utils/hooks/` (scroll constraints, wheel scroll, inverted border radius) build on framer-motion's `MotionValue`s. When adding motion to a new component, check whether an existing hook in `common/utils/hooks/` already does what you need before writing a new one.
 
 **Assets** are centralized: all images live in `src/assets/image/` and are required and re-exported as a single `Images` object from `src/assets/Images.ts` (CommonJS `require`, not ES `import`). Import images from `Images` rather than requiring image files directly in components. The CV PDF lives in `src/assets/cv/`.
 
-**`myWorks/` is the project-showcase section** — `MyWorks.tsx` (and the parallel `MyWorksVersion.tsx`/`MyWork.moduleVersion.scss`, an alternate/experimental layout kept side-by-side with the main one) lists work entries rendered by `myWork/MyWork.tsx`, which composes the `myWork/card/` subcomponents. Each showcased project's banner/icon assets come from `Images`.
+**`myWorks/` is the project-showcase section** — `MyWorks.tsx` holds the `workData` list (each entry has a `categoryKey` for the `tabs/ProjectTabs` filter, i18n keys for title/description, and a `tech` array shown as chips) and renders each entry with `myWork/card/` (`Card`, composed of `Image`, `CardTitle`, `ContentPlaceholder`). `MyWorksVersion.tsx` is an old alternate layout kept on purpose; it is not imported anywhere. Each showcased project's banner/icon assets come from `Images`.
 
 ## Git commits
 

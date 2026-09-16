@@ -70,7 +70,7 @@ function Nav({style}: NavPropsType) {
                 whileTap={{scale: 0.95}}
             >
                 <div className={s.icon_placeholder} style={itemStyle}>
-                    <img src={Images.download_icon} className={s.navIcon}/>
+                    <img src={Images.download_icon} className={s.navIcon} alt=""/>
                 </div>
                 <a
                     href={cvLink}

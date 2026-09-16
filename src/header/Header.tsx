@@ -31,19 +31,12 @@ function Header() {
     const containerRef = useRef(null);
     const {height} = useDimensions(containerRef);
 
-    const handleScroll = () => {
-        if (isOpen) {
-            console.log("scroll");
-            toggleOpen();
-        }
-    };
-
     useEffect(() => {
-        if (isOpen) {
-            window.addEventListener("scroll", handleScroll);
-        }
+        if (!isOpen) return;
+        const handleScroll = () => toggleOpen();
+        window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [isOpen]);
+    }, [isOpen, toggleOpen]);
 
     return (
         <motion.nav className={s.navItem}

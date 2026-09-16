@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormikErrors, useFormik} from "formik";
+import {useFormik} from "formik";
 import axios from "axios";
 import {useTranslation} from "react-i18next";
 import s from "./ContactsForm.module.scss"

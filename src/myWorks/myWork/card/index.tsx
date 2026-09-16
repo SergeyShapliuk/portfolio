@@ -123,7 +123,7 @@ export const Card = memo(
                         setSelectedId(id);
                     }
                 }}
-                     className={`${s.card_content_container} ${selectedId === id && s.open}`}>
+                     className={`${s.card_content_container} ${selectedId === id ? s.open : ""}`}>
                     <motion.div
                         ref={cardRef}
                         className={s.card_content}

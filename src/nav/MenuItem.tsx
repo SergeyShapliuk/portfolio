@@ -44,7 +44,7 @@ export const MenuItem = ({item}: MenuItemPropsType) => {
                        whileTap={{scale: 0.95}}
             >
 
-                <div className={s.icon_placeholder} style={style}><img src={item.icon} className={s.navIcon}/></div>
+                <div className={s.icon_placeholder} style={style}><img src={item.icon} className={s.navIcon} alt=""/></div>
                 <div className={s.text_placeholder} style={style}>{item.title}</div>
 
             </motion.li>

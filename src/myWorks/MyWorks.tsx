@@ -34,16 +34,10 @@ const MyWorksList = () => {
     const [selectedId, setSelectedId] = useState<string>("");
     const [activeTab, setActiveTab] = useState<TabKey>(getInitialTab);
 
-    const handleScroll = () => {
-        if (selectedId) {
-            setSelectedId("");
-        }
-    };
-
     useEffect(() => {
-        if (selectedId) {
-            window.addEventListener("scroll", handleScroll);
-        }
+        if (!selectedId) return;
+        const handleScroll = () => setSelectedId("");
+        window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [selectedId]);
 
