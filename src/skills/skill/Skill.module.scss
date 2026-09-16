@@ -49,17 +49,48 @@
     word-break: normal;
   }
 
+  // Only relevant once the mobile rules below clamp the description; the
+  // desktop card always shows the full text, so there's nothing to expand.
+  .readMore {
+    display: none;
+  }
+
   @media screen and (max-width: 856px) {
     width: 250px;
+    // The card had a fixed 450px height on every screen size, but a single
+    // mobile slide has no neighbours it needs to size-match, and full
+    // descriptions ran well past 450px — the overflow just spilled out
+    // past the card's visible edge instead of being contained.
+    height: auto;
     margin-left: 50%;
     right: 50%;
     transform: translate(-50%, 0%);
+
     .description {
       // Without border-box, width: 100% + this padding made the box 40px
       // wider than the card itself, pushing the padding outside the card's
       // visible edge instead of insetting the text from it.
       box-sizing: border-box;
       width: 100%;
+      cursor: pointer;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+
+      &.expanded {
+        -webkit-line-clamp: unset;
+        overflow: visible;
+      }
+    }
+
+    .readMore {
+      display: block;
+      margin: -10px 0 15px;
+      color: $primaryColor;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
     }
   }
 }
