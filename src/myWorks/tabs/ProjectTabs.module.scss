@@ -71,17 +71,20 @@
 
 @media only screen and (max-width: 600px) {
   .tabs {
-    // A hidden-scrollbar row looked like it was cut off, with no hint it
-    // could scroll. Wrap onto multiple centered rows instead so every tab
-    // is visible without needing to discover a scroll gesture.
-    flex-wrap: wrap;
-    justify-content: center;
-    width: auto;
-    max-width: 100%;
+    // The stadium border-radius looked fine for one row, but wrapping a
+    // second, shorter row inside the same pill shape drew a lopsided
+    // "dumbbell" outline. A 2-column grid with a normal rounded-rect
+    // background reads cleanly at any tab count.
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 360px;
+    border-radius: 20px;
     gap: 8px;
   }
 
   .tab {
+    justify-content: center;
     padding: 8px 14px;
     font-size: 14px;
   }
