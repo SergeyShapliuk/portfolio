@@ -3,11 +3,34 @@ import {createPortal} from "react-dom";
 import s from './Skill.module.scss'
 
 const MOBILE_QUERY = "(max-width: 856px)";
+// -webkit-line-clamp kept misplacing its ellipsis here (mid-word, with
+// source text still rendering after it) in this flex + webkit-box +
+// Swiper combination. Truncating the string itself in JS is less elegant
+// but actually reliable. ~260 chars is roughly what the fixed 450px card
+// has room for at this font-size once the icon and title are accounted
+// for.
+const MOBILE_DESCRIPTION_LIMIT = 260;
+
+function useMatchMedia(query: string): boolean {
+    const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
+
+    useEffect(() => {
+        const mql = window.matchMedia(query);
+        const onChange = () => setMatches(mql.matches);
+        mql.addEventListener("change", onChange);
+        return () => mql.removeEventListener("change", onChange);
+    }, [query]);
+
+    return matches;
+}
+
+function truncate(text: string, limit: number): string {
+    if (text.length <= limit) return text;
+    return text.slice(0, limit).replace(/\s+\S*$/, "") + "…";
+}
 
 function Skill(props: any) {
-    // Only relevant on mobile: the card clamps the description there (see
-    // Skill.module.scss), and tapping it opens the full text in a modal
-    // instead of growing the card, which kept the grid's uniform height.
+    const isMobile = useMatchMedia(MOBILE_QUERY);
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -19,18 +42,16 @@ function Skill(props: any) {
         };
     }, [isOpen]);
 
-    const openIfMobile = () => {
-        if (window.matchMedia(MOBILE_QUERY).matches) {
-            setIsOpen(true);
-        }
-    };
+    const cardDescription = isMobile
+        ? truncate(props.description, MOBILE_DESCRIPTION_LIMIT)
+        : props.description;
 
     return (
         <>
-            <div id={"lines"} className={s.skill} onClick={openIfMobile}>
+            <div id={"lines"} className={s.skill} onClick={() => isMobile && setIsOpen(true)}>
                 <div className={s.icon} style={props.style}/>
                 <h3 className={s.skillTitle}>{props.title}</h3>
-                <span className={s.description}>{props.description}</span>
+                <span className={s.description}>{cardDescription}</span>
             </div>
 
             {isOpen && createPortal(

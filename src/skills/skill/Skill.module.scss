@@ -59,19 +59,11 @@
       box-sizing: border-box;
       width: 100%;
       cursor: pointer;
-      // text-indent breaks -webkit-line-clamp's truncation: the ellipsis
-      // lands mid-line and whatever came after it in the source text still
-      // renders below, past the "…" — this element doesn't need the
-      // indent anyway since it's centered, not a justified paragraph.
+      // -webkit-line-clamp kept misplacing its ellipsis (mid-word, with
+      // leftover source text still rendering after it) in this flex +
+      // webkit-box + Swiper combination — Skill.tsx truncates the string
+      // itself instead, so this element just needs to wrap normally.
       text-indent: 0;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      // 450px card height, minus the icon block, the title and this
-      // element's own padding, leaves room for about 12 lines at this
-      // font-size/line-height; clamp a bit under that so the box has some
-      // margin instead of the last line landing right on the edge.
-      -webkit-line-clamp: 10;
-      overflow: hidden;
     }
   }
 }
