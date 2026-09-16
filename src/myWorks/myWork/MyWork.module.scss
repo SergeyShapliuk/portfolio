@@ -38,7 +38,13 @@
   // card fully covers them instead of showing through underneath.
   z-index: 1001;
   display: flex;
-  align-items: center;
+  // Not align-items: center: when .card_content is taller than the
+  // viewport, centering it here overflows evenly on both edges, and the
+  // top half becomes unreachable by scrolling (the container never scrolls
+  // to a negative offset). The item's own margin: auto below centers it
+  // the same way when it fits, but safely collapses to top-aligned,
+  // fully-scrollable when it doesn't.
+  align-items: flex-start;
   justify-content: center;
   overflow-y: auto;
   // Stops a touch scroll that reaches the top/bottom edge from chaining
@@ -85,6 +91,7 @@
   max-width: 1000px;
   height: auto;
   overflow: hidden;
+  margin: auto;
 }
 
 .card_open_link {
@@ -248,5 +255,9 @@ p {
   }
   .card_content_container.open {
     //padding: 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
