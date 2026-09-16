@@ -49,12 +49,6 @@
     word-break: normal;
   }
 
-  // Only relevant once the mobile rules below clamp the description; the
-  // desktop card always shows the full text, so there's nothing to expand.
-  .readMore {
-    display: none;
-  }
-
   @media screen and (max-width: 856px) {
     width: 250px;
 
@@ -67,17 +61,13 @@
       cursor: pointer;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
+      // 450px card height, minus the icon block, the title and this
+      // element's own padding, leaves room for about 12 lines at this
+      // font-size/line-height — clamp there instead of an arbitrary low
+      // number, so the text fills the card and only the overflow (if any)
+      // gets the ellipsis.
+      -webkit-line-clamp: 12;
       overflow: hidden;
-    }
-
-    .readMore {
-      display: block;
-      margin: 10px 0 0;
-      color: $primaryColor;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
     }
   }
 }
