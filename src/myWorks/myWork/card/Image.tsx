@@ -21,6 +21,8 @@ export const Image = ({
                 className={s.card_image}
                 src={image}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 initial={false}
                 animate={
                     isSelected ? {x: 0, y: 0} : {x: -pointOfInterest, y: 0}

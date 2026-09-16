@@ -1,25 +1,26 @@
-const tt_banner = require("./image/tap_table_banner.png");
+const tt_banner = require("./image/tap_table_banner.webp");
 const tt_icon = require("./image/tap_table.png");
-const nomo_banner = require("./image/nomoBanner.jpg");
+const nomo_banner = require("./image/nomoBanner.webp");
 const nomo_icon = require("./image/nomoLogo.jpg");
-const xinvest_banner = require("./image/xinvestBanner.png");
+const xinvest_banner = require("./image/xinvestBanner.webp");
 const xinvest_icon = require("./image/xinvestLogo.jpg");
-const praktika_banner = require("./image/praktikaBanner.png");
+const praktika_banner = require("./image/praktikaBanner.webp");
 const praktika_icon = require("./image/praktikaLogo.png");
-const supogram_banner = require("./image/supogramBanner.png");
-const autism_banner = require("./image/autismBanner.png");
+const supogram_banner = require("./image/supogramBanner.webp");
+const autism_banner = require("./image/autismBanner.webp");
 const autism_icon = require("./image/autismLogo.png");
-const selector_banner = require("./image/selectorBanner.png");
+const selector_banner = require("./image/selectorBanner.webp");
 const selector_icon = require("./image/selectorLogo.jpg");
-const investmatch_banner = require("./image/investmatchBanner.png");
-const bloyd_banner = require("./image/bloydBanner.png");
+const investmatch_banner = require("./image/investmatchBanner.webp");
+const bloyd_banner = require("./image/bloydBanner.webp");
 const bloyd_icon = require("./image/bloydLogo.png");
-const alemx_banner = require("./image/alemxBanner.png");
+const alemx_banner = require("./image/alemxBanner.webp");
 const alemx_icon = require("./image/alemxLogo.png");
-const dotbig_banner = require("./image/dotbigBanner.png");
-const dotbig_icon = require("./image/dotbigLogo.png");
-const shop_banner = require("./image/shopImage.jpeg");
-const todo_banner = require("./image/todolistImage.jpg");
+// Hidden projects (see commented entries in MyWorks.tsx) - uncomment together with them
+// const dotbig_banner = require("./image/dotbigBanner.png");
+// const dotbig_icon = require("./image/dotbigLogo.png");
+// const shop_banner = require("./image/shopImage.jpeg");
+const todo_banner = require("./image/todolistImage.webp");
 const github_icon = require("./image/github.jpg");
 const demo_icon = require("./image/demo.jpg");
 const home_icon = require("./image/home.png");
@@ -48,9 +49,9 @@ export const Images = {
     bloyd_icon,
     alemx_banner,
     alemx_icon,
-    dotbig_banner,
-    dotbig_icon,
-    shop_banner,
+    // dotbig_banner,
+    // dotbig_icon,
+    // shop_banner,
     todo_banner,
     github_icon,
     demo_icon,
