@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.512d72b1.css",
+    "main.css": "/portfolio/static/css/main.66e89bd7.css",
     "main.js": "/portfolio/static/js/main.a646675b.js",
     "static/js/488.0426d84d.chunk.js": "/portfolio/static/js/488.0426d84d.chunk.js",
     "static/media/Sergey Shapliuk CV (RU).pdf": "/portfolio/static/media/Sergey Shapliuk CV (RU).b564d0e20fbf84aaea7d.pdf",
@@ -43,12 +43,12 @@
     "static/media/alemxBanner.webp": "/portfolio/static/media/alemxBanner.59f1a62cba8201f76181.webp",
     "index.html": "/portfolio/index.html",
     "static/media/iconNode.svg": "/portfolio/static/media/iconNode.9c6959da11cec6b347c8d0b6d559f077.svg",
-    "main.512d72b1.css.map": "/portfolio/static/css/main.512d72b1.css.map",
+    "main.66e89bd7.css.map": "/portfolio/static/css/main.66e89bd7.css.map",
     "main.a646675b.js.map": "/portfolio/static/js/main.a646675b.js.map",
     "488.0426d84d.chunk.js.map": "/portfolio/static/js/488.0426d84d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.512d72b1.css",
+    "static/css/main.66e89bd7.css",
     "static/js/main.a646675b.js"
   ]
 }
