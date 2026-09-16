@@ -71,15 +71,14 @@
 
 @media only screen and (max-width: 600px) {
   .tabs {
-    justify-content: flex-start;
+    // A hidden-scrollbar row looked like it was cut off, with no hint it
+    // could scroll. Wrap onto multiple centered rows instead so every tab
+    // is visible without needing to discover a scroll gesture.
+    flex-wrap: wrap;
+    justify-content: center;
     width: auto;
     max-width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    gap: 8px;
   }
 
   .tab {
