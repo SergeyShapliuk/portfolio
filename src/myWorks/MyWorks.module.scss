@@ -19,7 +19,6 @@
   // a single filtered card the title/tabs/list are narrow enough to fit
   // one row and end up side by side instead of stacked.
   .myWorksContainer {
-    width: 100%;
     flex: 1 1 100%;
     display: flex;
     flex-direction: column;
@@ -34,14 +33,16 @@
       margin: 0;
     }
     .myWorks {
+      // Explicit width (not just max-width) so the flex-basis percentages on
+      // .card resolve against a fixed number: with align-items: center above,
+      // an auto-width flex item is sized by its own content (shrink-to-fit),
+      // so a single card computed a different basis than a full row did.
+      width: 100%;
       max-width: 95%;
-      //flex: 1 1 80%;
-      //padding: 45px 25px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-content: flex-start;
-
     }
 //@media screen and (max-width: 1129px) {
 //  justify-content: center;
