@@ -23,6 +23,15 @@
         text-align: center;
       }
 
+      // The browser's default 40px ul padding left the icon rows offset
+      // from the left edge while the heading above and the form below are
+      // centered — nothing lined them up with each other.
+      & ul {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+      }
+
       & li {
         color: white;
         list-style-type: none;
