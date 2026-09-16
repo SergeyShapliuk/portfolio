@@ -83,17 +83,35 @@ function Skills() {
                 <div className={`${styleContainer.container} ${s.skillsContainer}`}>
                     <Title title={t("title")} titleBg={"about"}/>
                     <Swiper
-                        spaceBetween={-200}
+                        // slidesPerView: 3 with spaceBetween: -200 overlapped the
+                        // cards almost entirely on narrow screens (each slide is
+                        // only ~250px wide there, so -200 ate 80% of it). Default
+                        // to one slide with normal spacing and only switch to the
+                        // 3-up coverflow overlap once there's enough room for it.
+                        spaceBetween={20}
                         effect={"coverflow"}
                         grabCursor={true}
-                        slidesPerView={3}
+                        slidesPerView={1}
                         className={s.swiper}
                         coverflowEffect={{
-                            rotate: 10,
-                            stretch: 100,
-                            depth: 50,
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 0,
                             modifier: 1,
                             slideShadows: false
+                        }}
+                        breakpoints={{
+                            700: {
+                                slidesPerView: 3,
+                                spaceBetween: -200,
+                                coverflowEffect: {
+                                    rotate: 10,
+                                    stretch: 100,
+                                    depth: 50,
+                                    modifier: 1,
+                                    slideShadows: false
+                                }
+                            }
                         }}
                         pagination={true}
                         modules={[EffectCoverflow, Pagination, Navigation]}>
