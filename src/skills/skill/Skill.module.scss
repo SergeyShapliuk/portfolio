@@ -55,6 +55,10 @@
     right: 50%;
     transform: translate(-50%, 0%);
     .description {
+      // Without border-box, width: 100% + this padding made the box 40px
+      // wider than the card itself, pushing the padding outside the card's
+      // visible edge instead of insetting the text from it.
+      box-sizing: border-box;
       width: 100%;
     }
   }
