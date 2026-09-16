@@ -51,6 +51,12 @@
         background-color: #bbb15c;
         margin-top: 10px;
       }
+
+      @media only screen and (max-width: 600px) {
+        & h2 {
+          font-size: 22px;
+        }
+      }
     }
   }
 }
