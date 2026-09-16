@@ -1,10 +1,13 @@
 {
+  "meta": {
+    "title": "Сергей Шаплюк — Full-Stack разработчик (React, React Native)",
+    "description": "Портфолио Сергея Шаплюка, full-stack разработчика на React и React Native: мобильные приложения в Google Play и App Store, веб-приложения и Telegram Mini Apps."
+  },
   "downloadCvButton": {
     "download": "Скачать",
     "cv": "CV"
   },
   "infoLabel": "Информация: ",
-  "rollerCallout": "Что ещё вы хотите узнать?",
   "cvModal": {
     "body": "Вы можете скачать актуальное резюме, чтобы увидеть все мои работы.",
     "downloadButton": "Скачать CV"

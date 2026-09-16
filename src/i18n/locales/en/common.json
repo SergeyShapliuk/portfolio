@@ -1,10 +1,13 @@
 {
+  "meta": {
+    "title": "Sergey Shapliuk — Full-Stack Developer (React, React Native)",
+    "description": "Portfolio of Sergey Shapliuk, a full-stack developer focused on React and React Native: mobile apps on Google Play and the App Store, web apps and Telegram Mini Apps."
+  },
   "downloadCvButton": {
     "download": "Download",
     "cv": "CV"
   },
   "infoLabel": "Information: ",
-  "rollerCallout": "What else do you need to know?",
   "cvModal": {
     "body": "You can download the latest CV to see all my work.",
     "downloadButton": "Download CV"

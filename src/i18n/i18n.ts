@@ -56,4 +56,16 @@ i18n
         }
     });
 
+// Keep <html lang>, the tab title and meta description in sync with the active language.
+// Crawlers and link previews still read the static English tags in public/index.html.
+const syncDocumentMeta = (detected: string) => {
+    const lng = i18n.resolvedLanguage || detected;
+    document.documentElement.lang = lng;
+    document.title = i18n.t("meta.title", {lng, ns: "common"});
+    document.querySelector("meta[name='description']")
+        ?.setAttribute("content", i18n.t("meta.description", {lng, ns: "common"}));
+};
+i18n.on("languageChanged", syncDocumentMeta);
+if (i18n.isInitialized) syncDocumentMeta(i18n.language);
+
 export default i18n;
