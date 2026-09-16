@@ -33,7 +33,14 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  // top:0/bottom:0 sizes against Android Chrome's "large viewport" (as if
+  // its address/gesture bar were hidden), so the box's real bottom edge
+  // can land underneath that bar — content there renders but is covered
+  // and unreachable by scroll. 100dvh tracks the viewport Chrome is
+  // actually showing right now; the plain vh line is the fallback for
+  // browsers without dvh support.
+  height: 100vh;
+  height: 100dvh;
   // Above the nav hamburger (999) and language switcher (1000) so the open
   // card fully covers them instead of showing through underneath.
   z-index: 1001;
@@ -50,7 +57,9 @@
   // Stops a touch scroll that reaches the top/bottom edge from chaining
   // into the page behind it, which was closing the card mid-read on mobile.
   overscroll-behavior-y: contain;
-  padding: 40px 0;
+  // Extra bottom padding for the gesture/nav bar's safe-area inset, so the
+  // last bit of content isn't flush against (and hidden under) it.
+  padding: 40px 0 calc(40px + env(safe-area-inset-bottom));
 }
 
 .card_content {
