@@ -13,20 +13,19 @@
   //align-content: center;
 
   @include backgroundLight();
-}
+
+  // Overrides the shared .container's flex row (space-evenly, wrap): that
+  // layout is fine when children are wide enough to force a wrap, but with
+  // a single filtered card the title/tabs/list are narrow enough to fit
+  // one row and end up side by side instead of stacked.
   .myWorksContainer {
     width: 100%;
     flex: 1 1 100%;
-    //padding: 25px;
-    //display: flex;
-    //padding-left: 25px;
-    //padding-right: 25px;
-    //padding: 25px;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+}
     ul,
     li{
       box-sizing: border-box;
