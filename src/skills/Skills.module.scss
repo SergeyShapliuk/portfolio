@@ -17,13 +17,5 @@
       margin-bottom: 30px;
     }
   }
-
-  @media screen and (max-width: 856px) {
-    // 80vh assumed a card tall enough to fill it; the mobile card now
-    // sizes to its own (clamped) content, so that minimum just left a big
-    // empty gap between the pagination dots and the next section.
-    min-height: 0;
-    padding-bottom: 40px;
-  }
 }
 

@@ -1,6 +1,30 @@
 @import "../../common/styles/sass/mixins.scss";
 @import "../../common/styles/sass/variables";
 
+// Not nested inside .skill: the modal below reuses these too.
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.skillTitle {
+  @include text($titleFontFamily, 16px, 1.2);
+  letter-spacing: 1px;
+  margin: 0 0 5px;
+}
+
 .skill {
   width: 350px;
   height: 450px;
@@ -15,30 +39,6 @@
   border-radius: 20px;
   background-color: white;
   @include box-shadow();
-
-  .icon {
-    width: 60px;
-    height: 60px;
-    //margin: 10px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    object-fit: cover;
-    object-position: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .skillTitle {
-    @include text($titleFontFamily, 16px, 1.2);
-    letter-spacing: 1px;
-    margin: 0 0 5px;
-  }
 
   .description {
     @include text($descriptionFontFamily, 14px, 1.6);
@@ -57,14 +57,6 @@
 
   @media screen and (max-width: 856px) {
     width: 250px;
-    // The card had a fixed 450px height on every screen size, but a single
-    // mobile slide has no neighbours it needs to size-match, and full
-    // descriptions ran well past 450px — the overflow just spilled out
-    // past the card's visible edge instead of being contained.
-    height: auto;
-    margin-left: 50%;
-    right: 50%;
-    transform: translate(-50%, 0%);
 
     .description {
       // Without border-box, width: 100% + this padding made the box 40px
@@ -75,18 +67,13 @@
       cursor: pointer;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 3;
       overflow: hidden;
-
-      &.expanded {
-        -webkit-line-clamp: unset;
-        overflow: visible;
-      }
     }
 
     .readMore {
       display: block;
-      margin: 10px 0 20px;
+      margin: 10px 0 0;
       color: $primaryColor;
       font-weight: 600;
       font-size: 14px;
@@ -95,7 +82,63 @@
   }
 }
 
+// Tapping a mobile card opens the full description here instead of
+// growing the card in place, which kept the card grid's uniform height.
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1001;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px calc(40px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
 
+.modalCard {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px 24px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include box-shadow();
 
+  .icon {
+    margin-top: 0;
+  }
 
+  .description {
+    @include text($descriptionFontFamily, 15px, 1.6);
+    font-weight: 500;
+    text-align: center;
+    word-break: normal;
+  }
+}
 
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #333;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
