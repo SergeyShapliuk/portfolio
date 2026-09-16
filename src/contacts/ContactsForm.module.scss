@@ -117,6 +117,31 @@
           background-position: 0 0;
         }
       }
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.6;
+
+        &:before {
+          animation: none;
+          opacity: 0;
+        }
+      }
+    }
+
+    & .statusMessage {
+      min-width: 100%;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: large;
+
+      & .success {
+        color: $primaryColor;
+      }
+
+      & .error {
+        color: #e05c5c;
+      }
     }
   }
 }

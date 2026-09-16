@@ -1,17 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useFormik} from "formik";
-import axios from "axios";
 import {useTranslation} from "react-i18next";
 import s from "./ContactsForm.module.scss"
 import {Popups} from "../common/feature/popup/Popup";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/moevagka";
 
 type FormValuesType = {
     email?: string
     name?: string
     message?: string
 }
+
+type StatusType = "idle" | "sending" | "success" | "error";
+
 const ContactsForm = () => {
     const {t} = useTranslation("contacts");
+    const [status, setStatus] = useState<StatusType>("idle");
+
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -38,10 +44,22 @@ const ContactsForm = () => {
             return errors;
         },
         onSubmit: async (values: FormValuesType) => {
-            formik.resetForm()
-            await axios.post("https://server-smtp-node-js.herokuapp.com/sendMessage", values
-            ).then(res => alert(t('form.successAlert')))
-                .catch(err => alert(t('form.errorAlert')))
+            setStatus("sending");
+            try {
+                const res = await fetch(FORMSPREE_ENDPOINT, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(values)
+                });
+                if (!res.ok) throw new Error("Formspree request failed");
+                setStatus("success");
+                formik.resetForm();
+            } catch (e) {
+                setStatus("error");
+            }
         }
     })
     return (
@@ -67,9 +85,14 @@ const ContactsForm = () => {
                     placeholder={t('form.messagePlaceholder')}
                     {...formik.getFieldProps("message")}/>
 
-                <button type="submit">
-                    {t('form.submit')}
+                <button type="submit" disabled={status === "sending"}>
+                    {status === "sending" ? t('form.sending') : t('form.submit')}
                 </button>
+
+                <div className={s.statusMessage} aria-live="polite">
+                    {status === "success" && <span className={s.success}>{t('form.success')}</span>}
+                    {status === "error" && <span className={s.error}>{t('form.error')}</span>}
+                </div>
             </form>
 
         </div>
