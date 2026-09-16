@@ -1,0 +1,89 @@
+@import "../../common/styles/sass/variables";
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 30px;
+  padding: 6px;
+  max-width: 95%;
+  width: fit-content;
+  border-radius: 999px;
+  background: $bgSecondColor;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-family: $titleFontFamily;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primaryColor;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primaryColor;
+    outline-offset: 2px;
+  }
+}
+
+.active,
+.active:hover {
+  color: $bgColor;
+}
+
+.indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: $primaryColor;
+}
+
+.label,
+.count {
+  position: relative;
+}
+
+.count {
+  min-width: 22px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  text-align: center;
+}
+
+.active .count {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 600px) {
+  .tabs {
+    justify-content: flex-start;
+    width: auto;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .tab {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}

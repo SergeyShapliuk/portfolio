@@ -22,6 +22,7 @@ type CardPropsType = {
     category?: string,
     title: string,
     description: string,
+    tech?: string[],
     pointOfInterest: number,
     hrefCode?: string,
     hrefDemo?: string,
@@ -39,6 +40,7 @@ export const Card = memo(
          category,
          title,
          description,
+         tech,
          pointOfInterest,
          hrefCode,
          hrefDemo,
@@ -142,7 +144,7 @@ export const Card = memo(
                             image={banner}
                         />
                         <CardTitle title={translatedTitle} category={translatedCategory} isSelected={selectedId === id}/>
-                        <ContentPlaceholder icon={icon} title={translatedTitle} description={translatedDescription}
+                        <ContentPlaceholder icon={icon} title={translatedTitle} description={translatedDescription} tech={tech}
                                             androidLink={androidLink} iosLink={iosLink} demo={hrefDemo}
                                             github={hrefCode}/>
                     </motion.div>

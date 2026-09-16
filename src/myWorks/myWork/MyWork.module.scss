@@ -1,3 +1,4 @@
+@import "../../common/styles/sass/variables";
 @import "../../common/styles/sass/mixins";
 
 //* {
@@ -12,27 +13,11 @@
 
 .card {
   position: relative;
-  padding: 25px;
-  height: 460px;
-  flex: 0 0 40%;
-  width: 40%;
-  max-width: 900px;
-}
-
-.card:nth-child(4n + 1),
-.card:nth-child(4n + 4) {
-  flex: 0 0 60%;
-  width: 60%;
-  max-width: 900px;
-
-}
-
-.card:nth-child(odd) {
-  padding-left: 0;
-}
-
-.card:nth-child(even) {
-  padding-right: 0;
+  padding: 12px;
+  height: 300px;
+  flex: 0 0 33.333%;
+  width: 33.333%;
+  max-width: 420px;
 }
 
 .card_content_container {
@@ -48,9 +33,13 @@
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: 3;
-  overflow: hidden;
-  padding: 110px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 40px 0;
 }
 
 .card_content {
@@ -67,6 +56,23 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.tech_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.tech_chip {
+  padding: 4px 12px;
+  border: 1px solid $primaryColor;
+  border-radius: 999px;
+  color: $primaryColor;
+  font-size: 13px;
+  line-height: 20px;
+  white-space: nowrap;
 }
 
 .open .card_content {
@@ -94,6 +100,22 @@
   transform: translate(0);
 }
 
+// Open card: the image scales with the card's own (max 65% / 1000px) width
+// instead of the fixed 420px/100vw used for the closed preview's pan effect.
+.card_content_container.open .card_image_container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+}
+
+.card_image_container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0) 65%);
+  pointer-events: none;
+}
+
 .card_image {
   //height: 100%;
   //max-width: 100%;
@@ -103,6 +125,12 @@
   //background-size: cover;
   //background-position: center;
   //background-repeat: no-repeat;
+}
+
+.card_content_container.open .card_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .card_icon{
   width: 50px;
@@ -124,6 +152,7 @@
 
 h2 {
   color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   //margin: 8px 0;
 }
 
@@ -131,6 +160,7 @@ h2 {
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .overlay {
@@ -160,7 +190,9 @@ h2 {
 
 .content_container {
   box-sizing: border-box;
-  padding: 435px 35px 35px 35px;
+  // top padding matches the open image's height (aspect-ratio 2/1 of this
+  // block's own width, per the % padding-top-is-relative-to-width rule) plus a gap
+  padding: calc(50% + 15px) 35px 35px 35px;
   max-width: 100%;
   width: 90vw;
 }
@@ -174,30 +206,21 @@ p {
 @media only screen and (max-width: 800px) {
   .card {
     flex: 0 0 50%;
+    width: 50%;
     max-width: 50%;
-    /*padding: 10px;*/
-  }
-
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 4) {
-    flex: 0 0 50%;
-    max-width: 50%;
+    height: 280px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .card {
     flex: 1 0 100%;
+    width: 100%;
     max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    height: 300px;
+    padding-left: 12px;
+    padding-right: 12px;
 
-  }
-
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 4) {
-    flex: 1 0 100%;
-    max-width: 100%;
   }
   //.card_content_container.open {
   //  position: fixed;

@@ -7,6 +7,7 @@ type ContentPlaceholderPropsType = {
     icon: string | undefined,
     title: string,
     description: string,
+    tech?: string[],
     androidLink?: string,
     iosLink?: string
     demo?: string,
@@ -16,6 +17,7 @@ export const ContentPlaceholder = React.memo(({
                                                   icon,
                                                   title,
                                                   description,
+                                                  tech,
                                                   androidLink,
                                                   iosLink,
                                                   demo,
@@ -34,7 +36,12 @@ export const ContentPlaceholder = React.memo(({
 
 
             </div>
-            <p>{description}</p>
+            {description && <p>{description}</p>}
+            {tech && tech.length > 0 && (
+                <ul className={s.tech_list}>
+                    {tech.map(item => <li key={item} className={s.tech_chip}>{item}</li>)}
+                </ul>
+            )}
             <div className={s.content_store}>
                 {androidLink && <a href={androidLink} target={"_blank"} rel="noreferrer">
                     <motion.img whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
