@@ -113,8 +113,7 @@ export const Card = memo(
         //     setSelectedId("");
         // };
         return (
-            <li ref={containerRef} className={s.card}
-                style={{touchAction: selectedId === id ? "none" : "auto"}}>
+            <li ref={containerRef} className={s.card}>
                 <Overlay selected={selectedId}/>
                 <div onClick={() => {
                     if (selectedId === id) {
@@ -130,9 +129,6 @@ export const Card = memo(
                         style={{...inverted, zIndex, y, cursor: selectedId === id ? "default" : "pointer"}}
                         layout
                         transition={selectedId === id ? openSpring : closeSpring}
-                        drag={selectedId === id ? "y" : false}
-                        dragConstraints={constraints}
-                        onDrag={checkSwipeToDismiss}
                         onUpdate={checkZIndex}
 
                     >

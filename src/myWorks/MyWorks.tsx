@@ -42,6 +42,19 @@ const MyWorksList = () => {
     }, [selectedId]);
 
     useEffect(() => {
+        if (!selectedId) return;
+        // Without this, a touch scroll inside the open card that reaches its
+        // top/bottom edge can bleed through to the body behind it, which
+        // fires the window "scroll" listener above and closes the card
+        // mid-read.
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [selectedId]);
+
+    useEffect(() => {
         // Проверяем sessionStorage вместо ref
         const hasShown = sessionStorage.getItem("cvModalShown");
 

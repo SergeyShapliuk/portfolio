@@ -34,11 +34,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  // Above the nav hamburger (999) and language switcher (1000) so the open
+  // card fully covers them instead of showing through underneath.
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  // Stops a touch scroll that reaches the top/bottom edge from chaining
+  // into the page behind it, which was closing the card mid-read on mobile.
+  overscroll-behavior-y: contain;
   padding: 40px 0;
 }
 
