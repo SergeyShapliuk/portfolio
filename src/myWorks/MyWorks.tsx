@@ -153,7 +153,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.2.title",
         description: "myWorks:projects.2.description",
-        tech: ["React Native", "Redux Toolkit", "React Navigation"],
+        tech: ["React Native", "Redux Toolkit", "React Navigation", "Firebase", "OneSignal", "Adjust", "i18next"],
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.nomoacademy",
         iosLink: "https://apps.apple.com/by/app/nomo-trading-academy/id6768712487"
@@ -176,7 +176,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.6.title",
         description: "myWorks:projects.6.description",
-        tech: ["React Native", "React Navigation", "React Native WebView"],
+        tech: ["React Native", "Zustand", "React Navigation", "React Native WebView", "Affise", "Customer.io"],
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.xinvest"
     },
@@ -188,7 +188,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.7.title",
         description: "myWorks:projects.7.description",
-        tech: ["React Native", "MobX", "React Navigation", "Socket.IO", "React Native WebView"],
+        tech: ["React Native", "MobX", "React Navigation", "Socket.IO", "React Native WebView", "UI Kitten", "React Native IAP", "Firebase"],
         pointOfInterest: 70,
         androidLink: "https://play.google.com/store/apps/details?id=com.praktikarus.android",
         iosLink: "https://apps.apple.com/by/app/praktika-ai-homework-helper/id6738703953"
@@ -201,7 +201,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.9.title",
         description: "myWorks:projects.9.description",
-        tech: ["React Native", "Expo", "Expo Router", "i18next"],
+        tech: ["React Native", "Expo", "Expo Router", "i18next", "React Native Paper", "React Native Reanimated", "Gifted Charts"],
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.app.autismFastCheck"
     },
@@ -213,7 +213,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.10.title",
         description: "myWorks:projects.10.description",
-        tech: ["React Native", "Redux Toolkit", "React Navigation", "Expo"],
+        tech: ["React Native", "Redux Toolkit", "React Navigation", "Expo", "Firebase", "Sentry"],
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.li.selector.events",
         iosLink: "https://apps.apple.com/by/app/selector-events/id1670019657"
@@ -226,7 +226,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.12.title",
         description: "myWorks:projects.12.description",
-        tech: ["React Native", "MobX", "React Navigation", "Stripe"],
+        tech: ["React Native", "MobX", "React Navigation", "Stripe", "Wallet Manager", "Intercom", "Mixpanel"],
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.bloycom",
         iosLink: "https://apps.apple.com/us/app/bloyd/id6443450676"
@@ -239,7 +239,7 @@ const workData: WorkDataType[] = [
         category: "myWorks:categories.mobile",
         title: "myWorks:projects.13.title",
         description: "myWorks:projects.13.description",
-        tech: ["React Native", "Zustand", "TanStack Query", "React Navigation", "Expo"],
+        tech: ["React Native", "Expo", "Redux Toolkit", "Zustand", "TanStack Query", "React Navigation", "Sumsub", "Crossmint"],
         pointOfInterest: 0,
         androidLink: "https://play.google.com/store/apps/details?id=com.alemxapp",
         iosLink: "https://apps.apple.com/us/app/alemx/id6618150854"
